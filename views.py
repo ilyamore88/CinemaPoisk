@@ -4,7 +4,7 @@ import json
 
 
 def indexRender(request):
-    return render(request, 'index.html', {})
+    return render(request, 'base.html', {})
 
 
 def cinemaRender(request):
