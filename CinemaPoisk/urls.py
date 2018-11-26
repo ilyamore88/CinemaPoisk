@@ -20,7 +20,7 @@ import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.indexRender),
-    path('cinema/', views.cinemaRender),
+    path('cinema/<int:cinemaid>', views.cinemaRender),
     path('movie/', views.movieRender),
     path('person/', views.personRender),
     path('signin/', views.signinRender),

@@ -1,10 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Cinema</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="head">
+        <div class="cinema__image" style="background-image: url('{% static image_url %}'); height: {{ image_height }}px;
+                width: {{ image_width }}px;"></div>
+        <div class="head__right">
+            <div class="title">{{ cinema.name }}</div>
+            <div class="info">{{ cinema.address }}</div>
+            {% if cinema.subway %}
+                <div class="info"><i class="fas fa-subway"></i>{{ cinema.subway }}</div>
+            {% endif %}
+        </div>
 
-</body>
-</html>
+    </div>
+    <div class="description">
+        {% for paragraph in cinema.description %}
+            <p>{{ paragraph }}</p>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,10 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>index page</title>
-</head>
-<body>
-
-</body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+    <ul class="cinemas__list">
+        {% for cinema in cinemas %}
+            <li class="cinema__item">
+                <a href="cinema/{{ cinema.id }}" class="cinema__item_block">
+                    <span class="cinema__item_title">{{ cinema.name }}</span>
+                    {% if cinema.subway %}
+                        <span class="cinema__item_subway"><i
+                                class="fas fa-subway"></i>{{ cinema.subway }}</span>
+                    {% endif %}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
