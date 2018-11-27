@@ -25,10 +25,10 @@
                 {% if movie.id == session.film_id %}
                     <li class="session">
                         <a href="/movie/{{ movie.id }}" class="session-link">
-                            <div class="film__title">{{ movie.name }}</div>
-                            <div class="session__date">{{ session.date }}</div>
-                            <div class="session__price">{{ session.price }}</div>
-                            <div class="session__format">{{ session.format }}</div>
+                            <span class="film__title">{{ movie.name }}</span>
+                            <span class="session__date">{{ session.date }}</span>
+                            <span class="session__format">{{ session.format }}</span>
+                            <span class="session__price">Цена: {{ session.price }}р.</span>
                         </a>
                     </li>
                 {% endif %}

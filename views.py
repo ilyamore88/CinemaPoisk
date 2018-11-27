@@ -21,7 +21,8 @@ def indexRender(request):
 def cinemaRender(request, cinemaid):
     for cinema in cinemas:
         if cinema["id"] == cinemaid:
-            im = Image.open("static/" + cinema["image"])
+            im = Image.open("static/" + cinema[
+                "image"])  # Это библиотека для работы с изображениями. Я получаю размер, чтобы потом корректно отображать на странице
             (width, height) = im.size
             return render(request, 'pages/cinema.html', {"cinema": cinema,
                                                          "image_width": width,
@@ -30,9 +31,11 @@ def cinemaRender(request, cinemaid):
     return render(request, '')
 
 
-def movieRender(request):
-    return render(request, 'pages/movie.html', {})
-
+def movieRender(request, movieid):
+    for movie in movies:
+        if movie["id"] == movieid:
+            return render(request, 'pages/movie.html', {"movie": movie})
+    return render(request, '')
 
 def personRender(request):
     return render(request, 'pages/person.html', {})
