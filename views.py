@@ -15,10 +15,9 @@ def indexRender(request):
 def cinemaRender(request, cinemaid):
     for cinema in cinemas:
         if cinema["id"] == cinemaid:
-            im = Image.open("static/images/" + str(cinema["id"]) + ".jpg")
+            im = Image.open("static/" + cinema["image"])
             (width, height) = im.size
             return render(request, 'pages/cinema.html', {"cinema": cinema,
-                                                         "image_url": "images/" + str(cinema["id"]) + ".jpg",
                                                          "image_width": width,
                                                          "image_height": height})
     return render(request, '')

@@ -2,7 +2,8 @@
 {% load static %}
 {% block content %}
     <div class="head">
-        <div class="cinema__image" style="background-image: url('{% static image_url %}'); height: {{ image_height }}px;
+        <div class="cinema__image"
+             style="background-image: url('{% static cinema.image %}'); height: {{ image_height }}px;
                 width: {{ image_width }}px;"></div>
         <div class="head__right">
             <div class="title">{{ cinema.name }}</div>

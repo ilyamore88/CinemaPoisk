@@ -1,1 +1,22 @@
-{}
+[
+  {
+    "id": 1,
+    "last-name": "Сингер",
+    "middle-name": "",
+    "first-name": "Брайан",
+    "actor_films_id": [],
+    "director_films_id": [
+      1
+    ]
+  },
+  {
+    "id": 2,
+    "last-name": "Рами",
+    "middle-name": "",
+    "first-name": "Малек",
+    "actor_films_id": [
+      1
+    ],
+    "director_films_id": []
+  }
+]
