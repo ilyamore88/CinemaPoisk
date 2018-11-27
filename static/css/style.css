@@ -172,6 +172,11 @@ footer {
     margin-right: 10px;
 }
 
+.info a {
+    color: #2a2a2a;
+    text-decoration: none;
+}
+
 .head__right {
     margin-left: 15px;
     display: inline-block;
@@ -256,4 +261,16 @@ footer {
 
 .session-link:hover {
     background: #202020;
+}
+
+.session-link:active {
+    color: #d6d6d6;
+}
+
+.movie__image {
+    float: left;
+    margin-bottom: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

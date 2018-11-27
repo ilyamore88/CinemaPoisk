@@ -1,10 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Movie</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="head">
+        <div class="movie__image"
+             style="background-image: url('{% static movie.image %}'); height: {{ image_height }}px;
+                     width: {{ image_width }}px;"></div>
+        <div class="head__right" style="width: {{ right_size }}px;">
+            <div class="title">{{ movie.name }}</div>
+            {% for director in staffs %}
+                {% if director.id == movie.director_id %}
+                    <div class="info">Режиссёр: <a href="/person/{{ movie.director_id }}"
+                                                   class="person">{{ director.first_name }} {{ director.middle_name }} {{ director.last_name }}</a>
+                    </div>
+                {% endif %}
+            {% endfor %}
+            <div class="info">Актёры:
+                {% for actor_id in movie.actors_id %}
+                    {% for actor in staffs %}
+                        {% if actor.id == actor_id %}
+                            <a href="/person/{{ actor_id }}"
+                               class="person">{{ actor.first_name }} {{ actor.middle_name }} {{ actor.last_name }}</a>,
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            </div>
+            <div class="info">Продолжительность: {{ movie.duration }}</div>
+            <div class="info">Возрастной рейтинг: {{ movie.age_rating }}</div>
+        </div>
 
-</body>
-</html>
+    </div>
+    <div class="description">
+        <p>{{ movie.description }}</p>
+    </div>
+{% endblock %}

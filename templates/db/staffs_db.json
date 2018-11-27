@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "last-name": "Сингер",
-    "middle-name": "",
-    "first-name": "Брайан",
+    "last_name": "Сингер",
+    "middle_name": "",
+    "first_name": "Брайан",
     "actor_films_id": [],
     "director_films_id": [
       1
@@ -11,9 +11,9 @@
   },
   {
     "id": 2,
-    "last-name": "Малек",
-    "middle-name": "",
-    "first-name": "Рами",
+    "last_name": "Малек",
+    "middle_name": "",
+    "first_name": "Рами",
     "actor_films_id": [
       1
     ],
@@ -21,9 +21,9 @@
   },
   {
     "id": 3,
-    "last-name": "Харди",
-    "middle-name": "",
-    "first-name": "Бен",
+    "last_name": "Харди",
+    "middle_name": "",
+    "first_name": "Бен",
     "actor_films_id": [
       1
     ],
@@ -31,9 +31,9 @@
   },
   {
     "id": 4,
-    "last-name": "Ли",
-    "middle-name": "",
-    "first-name": "Гвилим",
+    "last_name": "Ли",
+    "middle_name": "",
+    "first_name": "Гвилим",
     "actor_films_id": [
       1
     ],
@@ -41,9 +41,9 @@
   },
   {
     "id": 5,
-    "last-name": "Маццелло",
-    "middle-name": "",
-    "first-name": "Джозеф",
+    "last_name": "Маццелло",
+    "middle_name": "",
+    "first_name": "Джозеф",
     "actor_films_id": [
       1
     ],
@@ -51,9 +51,9 @@
   },
   {
     "id": 6,
-    "last-name": "МакКуин",
-    "middle-name": "",
-    "first-name": "Стив",
+    "last_name": "МакКуин",
+    "middle_name": "",
+    "first_name": "Стив",
     "actor_films_id": [],
     "director_films_id": [
       2
@@ -61,9 +61,9 @@
   },
   {
     "id": 7,
-    "last-name": "Дебики",
-    "middle-name": "",
-    "first-name": "Элизабет",
+    "last_name": "Дебики",
+    "middle_name": "",
+    "first_name": "Элизабет",
     "actor_films_id": [
       2
     ],
@@ -71,9 +71,9 @@
   },
   {
     "id": 8,
-    "last-name": "Калуя",
-    "middle-name": "",
-    "first-name": "Дэниэл",
+    "last_name": "Калуя",
+    "middle_name": "",
+    "first_name": "Дэниэл",
     "actor_films_id": [
       2
     ],
@@ -81,9 +81,9 @@
   },
   {
     "id": 9,
-    "last-name": "Нисон",
-    "middle-name": "",
-    "first-name": "Лиам",
+    "last_name": "Нисон",
+    "middle_name": "",
+    "first_name": "Лиам",
     "actor_films_id": [
       2
     ],
@@ -91,9 +91,9 @@
   },
   {
     "id": 10,
-    "last-name": "Родригес",
-    "middle-name": "",
-    "first-name": "Мишель",
+    "last_name": "Родригес",
+    "middle_name": "",
+    "first_name": "Мишель",
     "actor_films_id": [
       2
     ],
