@@ -6,6 +6,12 @@ import json
 file = open("templates/db/cinemas_db.json", "r", encoding="utf8")
 cinemas = json.loads(file.read())
 file.close()
+file = open("templates/db/movies_db.json", "r", encoding="utf8")
+movies = json.loads(file.read())
+file.close()
+file = open("templates/db/staffs_db.json", "r", encoding="utf8")
+staffs = json.loads(file.read())
+file.close()
 
 
 def indexRender(request):
@@ -19,7 +25,8 @@ def cinemaRender(request, cinemaid):
             (width, height) = im.size
             return render(request, 'pages/cinema.html', {"cinema": cinema,
                                                          "image_width": width,
-                                                         "image_height": height})
+                                                         "image_height": height,
+                                                         "movies": movies})
     return render(request, '')
 
 

@@ -204,3 +204,19 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.film__title {
+    display: inline-block;
+}
+
+.session__date {
+    display: inline-block;
+}
+
+.session__price {
+    display: inline-block;
+}
+
+.session__format {
+    display: inline-block;
+}

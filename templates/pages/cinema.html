@@ -4,7 +4,7 @@
     <div class="head">
         <div class="cinema__image"
              style="background-image: url('{% static cinema.image %}'); height: {{ image_height }}px;
-                width: {{ image_width }}px;"></div>
+                     width: {{ image_width }}px;"></div>
         <div class="head__right">
             <div class="title">{{ cinema.name }}</div>
             <div class="info">{{ cinema.address }}</div>
@@ -19,4 +19,20 @@
             <p>{{ paragraph }}</p>
         {% endfor %}
     </div>
+    <ul class="schedule">
+        {% for session in cinema.schedule %}
+            {% for movie in movies %}
+                {% if movie.id == session.film_id %}
+                    <li class="session">
+                        <a href="/movie/{{ movie.id }}" class="session-link">
+                            <div class="film__title">{{ movie.name }}</div>
+                            <div class="session__date">{{ session.date }}</div>
+                            <div class="session__price">{{ session.price }}</div>
+                            <div class="session__format">{{ session.format }}</div>
+                        </a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    </ul>
 {% endblock %}
