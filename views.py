@@ -46,8 +46,24 @@ def movieRender(request, movieid):
     return render(request, '')
 
 
-def personRender(request):
-    return render(request, 'pages/person.html', {})
+def personRender(request, personid):
+    for person in staffs:
+        if person["id"] == personid:
+            if person["image"]:
+                im = Image.open("static/" + person[
+                    "image"])  # Это библиотека для работы с изображениями. Я получаю размер, чтобы потом корректно отображать на странице
+                (width, height) = im.size
+                right_size = 900 - 15 - width
+            else:
+                width = 300
+                height = 400
+                right_size = 900 - 15 - width
+            return render(request, 'pages/person.html', {"person": person,
+                                                         "image_width": width,
+                                                         "image_height": height,
+                                                         "right_size": right_size,
+                                                         "movies": movies})
+    return render(request, '')
 
 
 def signinRender(request):

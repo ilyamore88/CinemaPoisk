@@ -274,3 +274,12 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.person__image {
+    float: left;
+    margin-bottom: 15px;
+    background-color: #a7a7a7;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

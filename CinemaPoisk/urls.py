@@ -22,7 +22,7 @@ urlpatterns = [
     path('', views.indexRender),
     path('cinema/<int:cinemaid>', views.cinemaRender),
     path('movie/<int:movieid>', views.movieRender),
-    path('person/', views.personRender),
+    path('person/<int:personid>', views.personRender),
     path('signin/', views.signinRender),
     path('signup/', views.signupRender),
 ]

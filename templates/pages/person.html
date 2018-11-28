@@ -1,10 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Person</title>
-</head>
-<body>
-
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="head">
+        <div class="person__image"
+             style="background-image: url('{% static person.image %}'); height: {{ image_height }}px;
+                     width: {{ image_width }}px;"></div>
+        <div class="head__right" style="width: {{ right_size }}px;">
+            <div class="title">{{ person.first_name }} {{ person.middle_name }} {{ person.last_name }}</div>
+            {% if person.director_films_id %}
+                <div class="info">Режиссёр:
+                    {% for movie_id in person.director_films_id %}
+                        {% for movie in movies %}
+                            {% if movie.id == movie_id %}
+                                <a href="/movie/{{ movie.id }}">{{ movie.name }}</a>,
+                            {% endif %}
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% if person.actor_films_id %}
+                <div class="info">Актёр:
+                    {% for movie_id in person.actor_films_id %}
+                        {% for movie in movies %}
+                            {% if movie.id == movie_id %}
+                                <a href="/movie/{{ movie.id }}">{{ movie.name }}</a>,
+                            {% endif %}
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
