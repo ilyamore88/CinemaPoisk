@@ -145,6 +145,14 @@ footer {
     border-radius: 10px;
 }
 
+.cinema__item_block:hover {
+    background: #202020;
+}
+
+.cinema__item_block:active {
+    position: relative;
+    top: 2px;
+}
 
 .cinema__item_title {
     font-family: 'fira_sansregular';
@@ -186,6 +194,10 @@ footer {
 .info a {
     color: #2a2a2a;
     text-decoration: none;
+}
+
+.info a:hover {
+    text-decoration: underline;
 }
 
 .head__right {
@@ -307,6 +319,12 @@ footer {
     width: 100%;
 }
 
+.register__form * {
+    display: block;
+    font-family: 'fira_sansregular';
+    width: 100%;
+}
+
 .form__input {
     margin-bottom: 15px;
     height: 40px;
@@ -336,9 +354,11 @@ footer {
 .form__button {
     margin-left: auto;
     margin-right: auto;
-    height: 30px;
-    width: 100px;
-    border-radius: 15px;
+    height: 40px;
+    width: auto;
+    padding-right: 30px;
+    padding-left: 30px;
+    border-radius: 20px;
     background: #292929;
     color: #ffffff;
     border: none;
@@ -352,4 +372,73 @@ footer {
 
 .form__button:active {
     color: #d6d6d6;
+}
+
+
+.register__form {
+    margin: 0 auto;
+    height: auto;
+    width: 300px;
+}
+
+
+.register__form label {
+    margin-left: 5px;
+    margin-bottom: 3px;
+}
+
+.register__form ul {
+    margin: 0;
+    padding-left: 0;
+    font-size: 14px;
+}
+
+.register__form ul li {
+    margin-left: 5px;
+    margin-bottom: 3px;
+}
+
+.register__form br {
+    display: none;
+}
+
+.register__form .helptext {
+    display: none;
+}
+
+.register__form #id_username, #id_password1, #id_password2 {
+    margin-bottom: 15px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #202020;
+    text-align: center;
+    border-color: #292929;
+}
+
+.register__form #id_password1 {
+    margin-bottom: 6px;
+}
+
+.register__form #id_username:-webkit-autofill, #id_password1:-webkit-autofill, #id_password2:-webkit-autofill {
+    -webkit-box-shadow: inset 0 0 0 50px #fff !important; /* Цвет фона */
+    -webkit-text-fill-color: #202020 !important; /* цвет текста */
+    color: #202020 !important; /* цвет текста */
+}
+
+.register__link {
+    font-size: 14px;
+}
+
+.register__link a {
+    display: inline-block;
+    width: auto;
+    text-decoration: none;
+    color: #292929;
+}
+
+.register__link a:hover {
+    text-decoration: underline;
 }

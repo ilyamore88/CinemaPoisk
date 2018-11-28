@@ -10,5 +10,6 @@ urlpatterns = [
     path('movie/<int:movieid>', views.movieRender),
     path('person/<int:personid>', views.personRender),
     path('auth/login', loginviews.login),
-    path('auth/logout', loginviews.logout)
+    path('auth/logout', loginviews.logout),
+    path('auth/register', loginviews.register)
 ]
