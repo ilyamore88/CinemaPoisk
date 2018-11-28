@@ -5,7 +5,7 @@
         <div class="cinema__image"
              style="background-image: url('{% static cinema.image %}'); height: {{ image_height }}px;
                      width: {{ image_width }}px;"></div>
-        <div class="head__right">
+        <div class="head__right" style="width: {{ right_size }}px;">
             <div class="title">{{ cinema.name }}</div>
             <div class="info">{{ cinema.address }}</div>
             {% if cinema.subway %}

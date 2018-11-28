@@ -25,9 +25,11 @@ def cinemaRender(request, cinemaid):
             im = Image.open("static/" + cinema[
                 "image"])  # Это библиотека для работы с изображениями. Я получаю размер, чтобы потом корректно отображать на странице
             (width, height) = im.size
+            right_size = 900 - 15 - width
             return render(request, 'pages/cinema.html', {"cinema": cinema,
                                                          "image_width": width,
                                                          "image_height": height,
+                                                         "right_size": right_size,
                                                          "movies": movies,
                                                          "username": auth.get_user(request).username})
     return render(request, '')
