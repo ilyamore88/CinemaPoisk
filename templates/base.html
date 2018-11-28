@@ -16,7 +16,13 @@
     <header class="header">
         <div class="container">
             <a href="/" class="homepage_link">CinemaPoisk</a>
-            <span class="header__right-block">Sign In | Sign Up</span>
+            <span class="header__right-block">
+                {% if username %}
+                    Здравствуйте, {{ username }} <a href="/auth/logout">Выйти</a>
+                {% else %}
+                    <a href="/auth/login">Войти</a>
+                {% endif %}
+            </span>
         </div>
     </header>
     <div class="content">

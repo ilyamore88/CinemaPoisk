@@ -1,6 +1,6 @@
-from django.http import HttpResponse
 from django.shortcuts import render
 from PIL import Image
+from django.contrib import auth
 import json
 
 file = open("templates/db/cinemas_db.json", "r", encoding="utf8")
@@ -15,7 +15,8 @@ file.close()
 
 
 def indexRender(request):
-    return render(request, 'pages/cinemas.html', {"cinemas": cinemas})
+    return render(request, 'pages/cinemas.html', {"cinemas": cinemas,
+                                                  "username": auth.get_user(request).username})
 
 
 def cinemaRender(request, cinemaid):
@@ -27,7 +28,8 @@ def cinemaRender(request, cinemaid):
             return render(request, 'pages/cinema.html', {"cinema": cinema,
                                                          "image_width": width,
                                                          "image_height": height,
-                                                         "movies": movies})
+                                                         "movies": movies,
+                                                         "username": auth.get_user(request).username})
     return render(request, '')
 
 
@@ -42,7 +44,8 @@ def movieRender(request, movieid):
                                                         "image_width": width,
                                                         "image_height": height,
                                                         "right_size": right_size,
-                                                        "staffs": staffs})
+                                                        "staffs": staffs,
+                                                        "username": auth.get_user(request).username})
     return render(request, '')
 
 
@@ -62,7 +65,8 @@ def personRender(request, personid):
                                                          "image_width": width,
                                                          "image_height": height,
                                                          "right_size": right_size,
-                                                         "movies": movies})
+                                                         "movies": movies,
+                                                         "username": auth.get_user(request).username})
     return render(request, '')
 
 
