@@ -2,6 +2,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from django.contrib import auth
 from django.template.context_processors import csrf
+import json
 
 
 def login(request):
@@ -37,6 +38,13 @@ def register(request):
             newuser = auth.authenticate(username=newuser_form.cleaned_data["username"],
                                         password=newuser_form.cleaned_data["password2"])
             auth.login(request, newuser)
+            file = open("templates/db/favorites_db.json", "r", encoding="utf8")
+            favorites = json.loads(file.read())
+            file.close()
+            favorites.append({"username": str(newuser_form.cleaned_data["username"]), "favorites_cinemas_id": []})
+            file = open("templates/db/favorites_db.json", "w", encoding="utf8")
+            file.write(json.dumps(favorites))
+            file.close()
             return redirect("/")
         else:
             args["form"] = newuser_form

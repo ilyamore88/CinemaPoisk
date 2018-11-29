@@ -72,9 +72,21 @@ def personRender(request, personid):
     return render(request, '')
 
 
-def signinRender(request):
-    return render(request, 'pages/signin.html', {})
-
-
-def signupRender(request):
-    return render(request, 'pages/signup.html', {})
+def favoritesRender(request):
+    username = auth.get_user(request).username
+    if username == "":
+        return render(request, 'pages/favorites.html', {"login_error": "Вы не вошли в систему",
+                                                        "username": auth.get_user(request).username})
+    else:
+        file = open("templates/db/favorites_db.json", "r", encoding="utf8")
+        favorites = json.loads(file.read())
+        file.close()
+        for user in favorites:
+            if username == user["username"]:
+                cinemas_for_render = []
+                for cinema_id in user["favorites_cinemas_id"]:
+                    for cinema in cinemas:
+                        if cinema["id"] == cinema_id:
+                            cinemas_for_render.append(cinema)
+                return render(request, 'pages/favorites.html', {"cinemas": cinemas_for_render,
+                                                                "username": auth.get_user(request).username})

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    {% if login_error %}
+        <div class="login__form">
+            <div class="info">{{ login_error }}</div>
+            <a href="/auth/login" class="login_link_button"><span>Войти</span></a>
+        </div>
+    {% else %}
+        <div class="title">Избранные кинотеатры:</div>
+        <ul class="cinemas__list">
+            {% for cinema in cinemas %}
+                <li class="cinema__item">
+                    <a href="/cinema/{{ cinema.id }}" class="cinema__item_block">
+                        <span class="cinema__item_title">{{ cinema.name }}</span>
+                        {% if cinema.subway %}
+                            <span class="cinema__item_subway"><i
+                                    class="fas fa-subway"></i>{{ cinema.subway }}</span>
+                        {% endif %}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}
