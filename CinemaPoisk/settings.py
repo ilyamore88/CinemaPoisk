@@ -50,8 +50,6 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'CinemaPoisk.urls'
 
-print(BASE_DIR)
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
