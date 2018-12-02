@@ -211,6 +211,31 @@ footer {
     margin-left: 15px;
     display: inline-block;
     float: left;
+    position: relative;
+}
+
+.favorite-change_link {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-family: 'fira_sansregular';
+    color: #292929;
+    text-decoration: none;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    border-bottom: 1px;
+    border-style: dotted;
+    line-height: 12px;
+}
+
+.favorite-change_link:hover {
+    color: #202020;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    border-bottom: 2px;
+    border-style: dotted;
 }
 
 .head:after {

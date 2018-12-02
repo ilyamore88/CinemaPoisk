@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from PIL import Image
 from django.contrib import auth
 import json
@@ -22,16 +22,43 @@ def indexRender(request):
 def cinemaRender(request, cinemaid):
     for cinema in cinemas:
         if cinema["id"] == cinemaid:
-            im = Image.open("static/" + cinema[
-                "image"])  # Это библиотека для работы с изображениями. Я получаю размер, чтобы потом корректно отображать на странице
-            (width, height) = im.size
-            right_size = 900 - 15 - width
-            return render(request, 'pages/cinema.html', {"cinema": cinema,
-                                                         "image_width": width,
-                                                         "image_height": height,
-                                                         "right_size": right_size,
-                                                         "movies": movies,
-                                                         "username": auth.get_user(request).username})
+            if request.GET.get('change', 'no') == 'yes':
+                file = open("templates/db/favorites_db.json", "r", encoding="utf8")
+                favorites = json.loads(file.read())
+                file.close()
+                for favorite in favorites:
+                    if favorite["username"] == auth.get_user(request).username:
+                        favorites.remove(favorite)
+                        if cinema["id"] in favorite["favorites_cinemas_id"]:
+                            favorite["favorites_cinemas_id"].remove(cinema["id"])
+                        else:
+                            favorite["favorites_cinemas_id"].append(cinema["id"])
+                        favorites.append(favorite)
+                        file = open("templates/db/favorites_db.json", "w", encoding="utf8")
+                        file.write(json.dumps(favorites))
+                        file.close()
+                        return redirect("/cinema/" + str(cinema["id"]))
+            else:
+                im = Image.open("static/" + cinema[
+                    "image"])  # Это библиотека для работы с изображениями. Я получаю размер, чтобы потом корректно отображать на странице
+                (width, height) = im.size
+                right_size = 900 - 15 - width
+                file = open("templates/db/favorites_db.json", "r", encoding="utf8")
+                favorites = json.loads(file.read())
+                file.close()
+                for favorite in favorites:
+                    if favorite["username"] == auth.get_user(request).username:
+                        if cinema["id"] in favorite["favorites_cinemas_id"]:
+                            isInFavorites = True
+                        else:
+                            isInFavorites = False
+                return render(request, 'pages/cinema.html', {"cinema": cinema,
+                                                             "image_width": width,
+                                                             "image_height": height,
+                                                             "right_size": right_size,
+                                                             "movies": movies,
+                                                             "isInFavorites": isInFavorites,
+                                                             "username": auth.get_user(request).username})
     return render(request, '')
 
 

@@ -11,8 +11,15 @@
             {% if cinema.subway %}
                 <div class="info"><i class="fas fa-subway"></i>{{ cinema.subway }}</div>
             {% endif %}
+            {% if cinema.tel %}
+                <div class="info"><i class="fas fa-phone"></i>{{ cinema.tel }}</div>
+            {% endif %}
+            {% if isInFavorites == False %}
+                <a href="/cinema/{{ cinema.id }}?change=yes" class="favorite-change_link">В избранное</a>
+            {% else %}
+                <a href="/cinema/{{ cinema.id }}?change=yes" class="favorite-change_link">В избранном</a>
+            {% endif %}
         </div>
-
     </div>
     <div class="description">
         {% for paragraph in cinema.description %}
