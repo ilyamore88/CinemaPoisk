@@ -28,6 +28,8 @@ def cinemaRender(request, cinemaid):
             if request.GET.get('date', '01.01.1970'):
                 currentDate = request.GET.get('date', '01.01.1970')
             if request.GET.get('change', 'no') == 'yes':
+                if auth.get_user(request).username == "":
+                    return redirect("/favorites")
                 file = open("templates/db/favorites_db.json", "r", encoding="utf8")
                 favorites = json.loads(file.read())
                 file.close()
@@ -48,6 +50,7 @@ def cinemaRender(request, cinemaid):
                     "image"])  # Это библиотека для работы с изображениями. Я получаю размер, чтобы потом корректно отображать на странице
                 (width, height) = im.size
                 right_size = 900 - 15 - width
+                isInFavorites = False
                 file = open("templates/db/favorites_db.json", "r", encoding="utf8")
                 favorites = json.loads(file.read())
                 file.close()
@@ -78,7 +81,7 @@ def cinemaRender(request, cinemaid):
                                                              "nextDays": nextDays,
                                                              "today": today,
                                                              "schedule": schedule})
-    return render(request, '')
+    return render(request, 'pages/404.html', {"username": auth.get_user(request).username})
 
 
 def movieRender(request, movieid):
@@ -94,7 +97,7 @@ def movieRender(request, movieid):
                                                         "right_size": right_size,
                                                         "staffs": staffs,
                                                         "username": auth.get_user(request).username})
-    return render(request, '')
+    return render(request, 'pages/404.html', {"username": auth.get_user(request).username})
 
 
 def personRender(request, personid):
@@ -115,7 +118,7 @@ def personRender(request, personid):
                                                          "right_size": right_size,
                                                          "movies": movies,
                                                          "username": auth.get_user(request).username})
-    return render(request, '')
+    return render(request, 'pages/404.html', {"username": auth.get_user(request).username})
 
 
 def favoritesRender(request):

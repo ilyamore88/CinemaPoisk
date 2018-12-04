@@ -585,3 +585,20 @@ footer {
     left: 50%;
     transform: translate(-50%, 0);
 }
+
+.wrapper_404 {
+    position: absolute;
+    width: 900px;
+    height: 600px;
+}
+
+.page_404 {
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #292929;
+    font-size: 90px;
+    font-family: fira_sansregular;
+}
