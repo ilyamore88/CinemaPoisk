@@ -14,22 +14,452 @@
     ],
     "schedule": [
       {
-        "film_id": 1,
-        "date": "27.11.2018 23:40",
-        "price": 210,
-        "format": "2D"
+        "date": "05.12.2018",
+        "sessions": [
+          {
+            "film_id": 1,
+            "time": "14:00",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "9:50",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "14:25",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "16:10",
+            "price": 180,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "17:55",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "23:30",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "23:40",
+            "price": 2000,
+            "format": "2D"
+          }
+        ]
       },
       {
-        "film_id": 2,
-        "date": "27.11.2018 23:10",
-        "price": 210,
-        "format": "2D"
+        "date": "06.12.2018",
+        "sessions": [
+          {
+            "film_id": 1,
+            "time": "11:40",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "12:10",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "22:40",
+            "price": 2000,
+            "format": "2D"
+          },
+          {
+            "film_id": 1,
+            "time": "14:00",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "9:50",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "14:25",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "16:10",
+            "price": 180,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "17:55",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "23:30",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "23:40",
+            "price": 2000,
+            "format": "2D"
+          }
+        ]
       },
       {
-        "film_id": 2,
-        "date": "27.11.2018 23:40",
-        "price": 2000,
-        "format": "2D"
+        "date": "07.12.2018",
+        "sessions": [
+          {
+            "film_id": 1,
+            "time": "14:00",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "9:50",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "14:25",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "16:10",
+            "price": 180,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "17:55",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "23:30",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "23:40",
+            "price": 2000,
+            "format": "2D"
+          }
+        ]
+      },
+      {
+        "date": "08.12.2018",
+        "sessions": [
+          {
+            "film_id": 1,
+            "time": "11:40",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "12:10",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "22:40",
+            "price": 2000,
+            "format": "2D"
+          },
+          {
+            "film_id": 1,
+            "time": "14:00",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "9:50",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "14:25",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "16:10",
+            "price": 180,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "17:55",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "23:30",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "23:40",
+            "price": 2000,
+            "format": "2D"
+          }
+        ]
+      },
+      {
+        "date": "09.12.2018",
+        "sessions": [
+          {
+            "film_id": 1,
+            "time": "14:00",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "9:50",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "14:25",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "16:10",
+            "price": 180,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "17:55",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "23:30",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "23:40",
+            "price": 2000,
+            "format": "2D"
+          }
+        ]
+      },
+      {
+        "date": "10.12.2018",
+        "sessions": [
+          {
+            "film_id": 1,
+            "time": "11:40",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "12:10",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "22:40",
+            "price": 2000,
+            "format": "2D"
+          },
+          {
+            "film_id": 1,
+            "time": "14:00",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "9:50",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "14:25",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "16:10",
+            "price": 180,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "17:55",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "23:30",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "23:40",
+            "price": 2000,
+            "format": "2D"
+          }
+        ]
+      },
+      {
+        "date": "11.12.2018",
+        "sessions": [
+          {
+            "film_id": 1,
+            "time": "14:00",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "9:50",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "14:25",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "16:10",
+            "price": 180,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "17:55",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "23:30",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "23:40",
+            "price": 2000,
+            "format": "2D"
+          }
+        ]
+      },
+      {
+        "date": "12.12.2018",
+        "sessions": [
+          {
+            "film_id": 1,
+            "time": "11:40",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "12:10",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "22:40",
+            "price": 2000,
+            "format": "2D"
+          },
+          {
+            "film_id": 1,
+            "time": "14:00",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "9:50",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "14:25",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "16:10",
+            "price": 180,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "17:55",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "23:30",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "23:40",
+            "price": 2000,
+            "format": "2D"
+          }
+        ]
       }
     ]
   },
@@ -47,22 +477,50 @@
     ],
     "schedule": [
       {
-        "film_id": 1,
-        "date": "27.11.2018 23:40",
-        "price": 210,
-        "format": "2D"
+        "date": "05.12.2018",
+        "sessions": [
+          {
+            "film_id": 1,
+            "time": "23:40",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "23:10",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "23:40",
+            "price": 2000,
+            "format": "2D"
+          }
+        ]
       },
       {
-        "film_id": 2,
-        "date": "27.11.2018 23:10",
-        "price": 210,
-        "format": "2D"
-      },
-      {
-        "film_id": 2,
-        "date": "27.11.2018 23:40",
-        "price": 2000,
-        "format": "2D"
+        "date": "06.12.2018",
+        "sessions": [
+          {
+            "film_id": 1,
+            "time": "11:40",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "12:10",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "22:40",
+            "price": 2000,
+            "format": "2D"
+          }
+        ]
       }
     ]
   },
@@ -80,22 +538,50 @@
     ],
     "schedule": [
       {
-        "film_id": 1,
-        "date": "27.11.2018 23:40",
-        "price": 210,
-        "format": "2D"
+        "date": "05.12.2018",
+        "sessions": [
+          {
+            "film_id": 1,
+            "time": "23:40",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "23:10",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "23:40",
+            "price": 2000,
+            "format": "2D"
+          }
+        ]
       },
       {
-        "film_id": 2,
-        "date": "27.11.2018 23:10",
-        "price": 210,
-        "format": "2D"
-      },
-      {
-        "film_id": 2,
-        "date": "27.11.2018 23:40",
-        "price": 2000,
-        "format": "2D"
+        "date": "06.12.2018",
+        "sessions": [
+          {
+            "film_id": 1,
+            "time": "11:40",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "12:10",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "22:40",
+            "price": 2000,
+            "format": "2D"
+          }
+        ]
       }
     ]
   },
@@ -115,22 +601,452 @@
     ],
     "schedule": [
       {
-        "film_id": 1,
-        "date": "27.11.2018 23:40",
-        "price": 210,
-        "format": "2D"
+        "date": "05.12.2018",
+        "sessions": [
+          {
+            "film_id": 1,
+            "time": "14:00",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "9:50",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "14:25",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "16:10",
+            "price": 180,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "17:55",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "23:30",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "23:40",
+            "price": 2000,
+            "format": "2D"
+          }
+        ]
       },
       {
-        "film_id": 2,
-        "date": "27.11.2018 23:10",
-        "price": 210,
-        "format": "2D"
+        "date": "06.12.2018",
+        "sessions": [
+          {
+            "film_id": 1,
+            "time": "11:40",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "12:10",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "22:40",
+            "price": 2000,
+            "format": "2D"
+          },
+          {
+            "film_id": 1,
+            "time": "14:00",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "9:50",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "14:25",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "16:10",
+            "price": 180,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "17:55",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "23:30",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "23:40",
+            "price": 2000,
+            "format": "2D"
+          }
+        ]
       },
       {
-        "film_id": 2,
-        "date": "27.11.2018 23:40",
-        "price": 2000,
-        "format": "2D"
+        "date": "07.12.2018",
+        "sessions": [
+          {
+            "film_id": 1,
+            "time": "14:00",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "9:50",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "14:25",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "16:10",
+            "price": 180,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "17:55",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "23:30",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "23:40",
+            "price": 2000,
+            "format": "2D"
+          }
+        ]
+      },
+      {
+        "date": "08.12.2018",
+        "sessions": [
+          {
+            "film_id": 1,
+            "time": "11:40",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "12:10",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "22:40",
+            "price": 2000,
+            "format": "2D"
+          },
+          {
+            "film_id": 1,
+            "time": "14:00",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "9:50",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "14:25",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "16:10",
+            "price": 180,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "17:55",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "23:30",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "23:40",
+            "price": 2000,
+            "format": "2D"
+          }
+        ]
+      },
+      {
+        "date": "09.12.2018",
+        "sessions": [
+          {
+            "film_id": 1,
+            "time": "14:00",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "9:50",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "14:25",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "16:10",
+            "price": 180,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "17:55",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "23:30",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "23:40",
+            "price": 2000,
+            "format": "2D"
+          }
+        ]
+      },
+      {
+        "date": "10.12.2018",
+        "sessions": [
+          {
+            "film_id": 1,
+            "time": "11:40",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "12:10",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "22:40",
+            "price": 2000,
+            "format": "2D"
+          },
+          {
+            "film_id": 1,
+            "time": "14:00",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "9:50",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "14:25",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "16:10",
+            "price": 180,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "17:55",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "23:30",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "23:40",
+            "price": 2000,
+            "format": "2D"
+          }
+        ]
+      },
+      {
+        "date": "11.12.2018",
+        "sessions": [
+          {
+            "film_id": 1,
+            "time": "14:00",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "9:50",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "14:25",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "16:10",
+            "price": 180,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "17:55",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "23:30",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "23:40",
+            "price": 2000,
+            "format": "2D"
+          }
+        ]
+      },
+      {
+        "date": "12.12.2018",
+        "sessions": [
+          {
+            "film_id": 1,
+            "time": "11:40",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "12:10",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "22:40",
+            "price": 2000,
+            "format": "2D"
+          },
+          {
+            "film_id": 1,
+            "time": "14:00",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "9:50",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "14:25",
+            "price": 100,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "16:10",
+            "price": 180,
+            "format": "2D"
+          },
+          {
+            "film_id": 3,
+            "time": "17:55",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "23:30",
+            "price": 210,
+            "format": "2D"
+          },
+          {
+            "film_id": 2,
+            "time": "23:40",
+            "price": 2000,
+            "format": "2D"
+          }
+        ]
       }
     ]
   }

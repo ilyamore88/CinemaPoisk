@@ -15,9 +15,11 @@
                 <div class="info"><i class="fas fa-phone"></i>{{ cinema.tel }}</div>
             {% endif %}
             {% if isInFavorites == False %}
-                <a href="/cinema/{{ cinema.id }}?change=yes" class="favorite-change_link">В избранное</a>
+                <a href="/cinema/{{ cinema.id }}?date={{ currentDate }}&change=yes" class="favorite-change_link">В
+                    избранное</a>
             {% else %}
-                <a href="/cinema/{{ cinema.id }}?change=yes" class="favorite-change_link">В избранном</a>
+                <a href="/cinema/{{ cinema.id }}?date={{ currentDate }}&change=yes" class="favorite-change_link">В
+                    избранном</a>
             {% endif %}
         </div>
     </div>
@@ -26,14 +28,19 @@
             <p>{{ paragraph }}</p>
         {% endfor %}
     </div>
+    <a href="/cinema/{{ cinema.id }}?date={{ today }}" class="date_link"><span>Сегодня</span></a>
+    <div class="current_date"><span>{{ currentDate }}</span></div>
+    {% for date in nextDays %}
+        <a href="/cinema/{{ cinema.id }}?date={{ date }}" class="date_link"><span>{{ date }}</span></a>
+    {% endfor %}
     <ul class="schedule">
-        {% for session in cinema.schedule %}
+        {% for session in schedule %}
             {% for movie in movies %}
                 {% if movie.id == session.film_id %}
                     <li class="session">
                         <a href="/movie/{{ movie.id }}" class="session-link">
                             <span class="film__title">{{ movie.name }}</span>
-                            <span class="session__date">{{ session.date }}</span>
+                            <span class="session__date">{{ session.time }}</span>
                             <span class="session__format">{{ session.format }}</span>
                             <span class="session__price">Цена: {{ session.price }}р.</span>
                         </a>

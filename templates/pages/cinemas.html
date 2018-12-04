@@ -3,7 +3,7 @@
     <ul class="cinemas__list">
         {% for cinema in cinemas %}
             <li class="cinema__item">
-                <a href="/cinema/{{ cinema.id }}" class="cinema__item_block">
+                <a href="/cinema/{{ cinema.id }}?date={{ currentDate }}" class="cinema__item_block">
                     <span class="cinema__item_title">{{ cinema.name }}</span>
                     {% if cinema.subway %}
                         <span class="cinema__item_subway"><i

@@ -26,7 +26,7 @@
     "last_name": "Харди",
     "middle_name": "",
     "first_name": "Бен",
-    "image": "",
+    "image": "images/staffs/3.jpg",
     "actor_films_id": [
       1
     ],
@@ -37,7 +37,7 @@
     "last_name": "Ли",
     "middle_name": "",
     "first_name": "Гвилим",
-    "image": "",
+    "image": "images/staffs/4.jpg",
     "actor_films_id": [
       1
     ],
@@ -48,7 +48,7 @@
     "last_name": "Маццелло",
     "middle_name": "",
     "first_name": "Джозеф",
-    "image": "",
+    "image": "images/staffs/5.jpg",
     "actor_films_id": [
       1
     ],
@@ -59,7 +59,7 @@
     "last_name": "МакКуин",
     "middle_name": "",
     "first_name": "Стив",
-    "image": "",
+    "image": "images/staffs/6.jpg",
     "actor_films_id": [],
     "director_films_id": [
       2
@@ -70,7 +70,7 @@
     "last_name": "Дебики",
     "middle_name": "",
     "first_name": "Элизабет",
-    "image": "",
+    "image": "images/staffs/7.jpg",
     "actor_films_id": [
       2
     ],
@@ -81,7 +81,7 @@
     "last_name": "Калуя",
     "middle_name": "",
     "first_name": "Дэниэл",
-    "image": "",
+    "image": "images/staffs/8.jpg",
     "actor_films_id": [
       2
     ],
@@ -92,7 +92,7 @@
     "last_name": "Нисон",
     "middle_name": "",
     "first_name": "Лиам",
-    "image": "",
+    "image": "images/staffs/9.jpg",
     "actor_films_id": [
       2
     ],
@@ -103,9 +103,64 @@
     "last_name": "Родригес",
     "middle_name": "",
     "first_name": "Мишель",
-    "image": "",
+    "image": "images/staffs/10.jpg",
     "actor_films_id": [
       2
+    ],
+    "director_films_id": []
+  },
+  {
+    "id": 11,
+    "last_name": "Суворов",
+    "middle_name": "",
+    "first_name": "Дмитрий",
+    "image": "images/staffs/11.jpg",
+    "actor_films_id": [],
+    "director_films_id": [
+      3
+    ]
+  },
+  {
+    "id": 12,
+    "last_name": "Курцын",
+    "middle_name": "",
+    "first_name": "Роман",
+    "image": "images/staffs/12.jpg",
+    "actor_films_id": [
+      3
+    ],
+    "director_films_id": []
+  },
+  {
+    "id": 13,
+    "last_name": "Смольянинов",
+    "middle_name": "",
+    "first_name": "Артур",
+    "image": "images/staffs/13.jpg",
+    "actor_films_id": [
+      3
+    ],
+    "director_films_id": []
+  },
+  {
+    "id": 14,
+    "last_name": "Якушев",
+    "middle_name": "",
+    "first_name": "Данила",
+    "image": "images/staffs/14.jpg",
+    "actor_films_id": [
+      3
+    ],
+    "director_films_id": []
+  },
+  {
+    "id": 15,
+    "last_name": "Каганович",
+    "middle_name": "",
+    "first_name": "Кирилл",
+    "image": "images/staffs/15.jpg",
+    "actor_films_id": [
+      3
     ],
     "director_films_id": []
   }

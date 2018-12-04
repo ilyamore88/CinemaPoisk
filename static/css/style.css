@@ -115,6 +115,38 @@ footer {
     background: #000000;
 }
 
+.footer__left, .footer__right {
+    width: 50%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+
+.footer__left_link {
+    color: #ffffff;
+    font-size: 18px;
+    font-family: fira_sansregular;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.footer__left_link i {
+    margin-right: 5px;
+}
+
+.footer__right_link {
+    color: #ffffff;
+    font-size: 18px;
+    font-family: fira_sansregular;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translate(0, -50%);
+}
+
 .page-content {
     padding-top: 15px;
 }
@@ -271,6 +303,40 @@ footer {
     transform: translate(0, -50%);
 }
 
+.date_link, .current_date {
+    position: relative;
+    display: inline-block;
+    float: left;
+    height: 50px;
+    width: 16.667%;
+    color: #ffffff;
+    background: #292929;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'fira_sansregular';
+}
+
+.date_link span, .current_date span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.date_link:after, .current_date:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.current_date {
+    background: #202020;
+}
+
+.date_link:hover {
+    background: #202020;
+}
+
 .session__date {
     position: absolute;
     top: 50%;
@@ -295,6 +361,7 @@ footer {
 .schedule {
     margin-left: 0px;
     padding-left: 0px;
+    clear: both;
 }
 
 .session {

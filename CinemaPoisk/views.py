@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from PIL import Image
 from django.contrib import auth
 import json
+from datetime import datetime, timedelta
 
 file = open("templates/db/cinemas_db.json", "r", encoding="utf8")
 cinemas = json.loads(file.read())
@@ -15,13 +16,17 @@ file.close()
 
 
 def indexRender(request):
+    currentDate = datetime.today().strftime("%d.%m.%Y")
     return render(request, 'pages/cinemas.html', {"cinemas": cinemas,
-                                                  "username": auth.get_user(request).username})
+                                                  "username": auth.get_user(request).username,
+                                                  "currentDate": currentDate})
 
 
 def cinemaRender(request, cinemaid):
     for cinema in cinemas:
         if cinema["id"] == cinemaid:
+            if request.GET.get('date', '01.01.1970'):
+                currentDate = request.GET.get('date', '01.01.1970')
             if request.GET.get('change', 'no') == 'yes':
                 file = open("templates/db/favorites_db.json", "r", encoding="utf8")
                 favorites = json.loads(file.read())
@@ -37,7 +42,7 @@ def cinemaRender(request, cinemaid):
                         file = open("templates/db/favorites_db.json", "w", encoding="utf8")
                         file.write(json.dumps(favorites))
                         file.close()
-                        return redirect("/cinema/" + str(cinema["id"]))
+                        return redirect("/cinema/" + str(cinema["id"]) + "?date=" + currentDate)
             else:
                 im = Image.open("static/" + cinema[
                     "image"])  # Это библиотека для работы с изображениями. Я получаю размер, чтобы потом корректно отображать на странице
@@ -52,13 +57,27 @@ def cinemaRender(request, cinemaid):
                             isInFavorites = True
                         else:
                             isInFavorites = False
+                today = datetime.today().strftime("%d.%m.%Y")
+                date = datetime.strptime(currentDate, "%d.%m.%Y")
+                nextDays = []
+                for i in range(1, 5):
+                    nextDays.append((date + timedelta(days=i)).strftime("%d.%m.%Y"))
+                schedule = []
+                for day in cinema["schedule"]:
+                    if day["date"] == currentDate:
+                        schedule = day["sessions"]
+                        break
                 return render(request, 'pages/cinema.html', {"cinema": cinema,
                                                              "image_width": width,
                                                              "image_height": height,
                                                              "right_size": right_size,
                                                              "movies": movies,
                                                              "isInFavorites": isInFavorites,
-                                                             "username": auth.get_user(request).username})
+                                                             "username": auth.get_user(request).username,
+                                                             "currentDate": currentDate,
+                                                             "nextDays": nextDays,
+                                                             "today": today,
+                                                             "schedule": schedule})
     return render(request, '')
 
 
@@ -101,9 +120,11 @@ def personRender(request, personid):
 
 def favoritesRender(request):
     username = auth.get_user(request).username
+    currentDate = datetime.today().strftime("%d.%m.%Y")
     if username == "":
         return render(request, 'pages/favorites.html', {"login_error": "Вы не вошли в систему",
-                                                        "username": auth.get_user(request).username})
+                                                        "username": auth.get_user(request).username,
+                                                        "currentDate": currentDate})
     else:
         file = open("templates/db/favorites_db.json", "r", encoding="utf8")
         favorites = json.loads(file.read())
@@ -116,4 +137,5 @@ def favoritesRender(request):
                         if cinema["id"] == cinema_id:
                             cinemas_for_render.append(cinema)
                 return render(request, 'pages/favorites.html', {"cinemas": cinemas_for_render,
-                                                                "username": auth.get_user(request).username})
+                                                                "username": auth.get_user(request).username,
+                                                                "currentDate": currentDate})
