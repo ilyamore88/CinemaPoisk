@@ -6,5 +6,11 @@
     "favorites_cinemas_id": [
       2
     ]
+  },
+  {
+    "username": "kjefksjdfkjsdf",
+    "password": "1234556789",
+    "permissions": "moderator",
+    "favorites_cinemas_id": []
   }
 ]

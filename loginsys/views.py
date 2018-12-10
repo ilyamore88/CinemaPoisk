@@ -39,13 +39,13 @@ def register(request):
                                         password=newuser_form.cleaned_data["password2"])
             auth.login(request, newuser)
             file = open("templates/db/users_db.json", "r", encoding="utf8")
-            favorites = json.loads(file.read())
+            users = json.loads(file.read())
             file.close()
-            favorites.append({"username": str(newuser_form.cleaned_data["username"]),
-                              "password": str(newuser_form.cleaned_data["password2"]), "permissions": "user",
-                              "favorites_cinemas_id": []})
+            users.append({"username": str(newuser_form.cleaned_data["username"]),
+                          "password": str(newuser_form.cleaned_data["password2"]), "permissions": "user",
+                          "favorites_cinemas_id": []})
             file = open("templates/db/users_db.json", "w", encoding="utf8")
-            file.write(json.dumps(favorites))
+            file.write(json.dumps(users))
             file.close()
             return redirect("/")
         else:

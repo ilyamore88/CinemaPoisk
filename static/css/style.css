@@ -190,7 +190,7 @@ footer {
 
 .cinema__item_block:active {
     position: relative;
-    top: 2px;
+    top: 1px;
 }
 
 .cinema__item_title {
@@ -601,4 +601,34 @@ footer {
     color: #292929;
     font-size: 90px;
     font-family: fira_sansregular;
+}
+
+.adminpanel {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.admin__button {
+    display: inline-block;
+    padding: 0 15px;
+    border-radius: 20px;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+    font-family: fira_sansregular;
+    background: #292929;
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.admin__button:hover {
+    background: #202020;
+    color: #f6f6f6;
+}
+
+.admin__button:active {
+    position: relative;
+    top: 1px;
 }

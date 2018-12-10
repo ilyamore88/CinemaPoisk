@@ -16,13 +16,36 @@ file.close()
 
 
 def indexRender(request):
+    username = auth.get_user(request).username
+    file = open("templates/db/users_db.json", "r", encoding="utf8")
+    users = json.loads(file.read())
+    file.close()
+    currentUser = {}
+    for user in users:
+        if username == user["username"]:
+            currentUser = user
+            break
+    if currentUser == {}:
+        currentUser["permissions"] = "not authorized"
     currentDate = datetime.today().strftime("%d.%m.%Y")
     return render(request, 'pages/cinemas.html', {"cinemas": cinemas,
                                                   "username": auth.get_user(request).username,
+                                                  "currentUserPermissions": currentUser["permissions"],
                                                   "currentDate": currentDate})
 
 
 def cinemaRender(request, cinemaid):
+    username = auth.get_user(request).username
+    file = open("templates/db/users_db.json", "r", encoding="utf8")
+    users = json.loads(file.read())
+    file.close()
+    currentUser = {}
+    for user in users:
+        if username == user["username"]:
+            currentUser = user
+            break
+    if currentUser == {}:
+        currentUser["permissions"] = "not authorized"
     for cinema in cinemas:
         if cinema["id"] == cinemaid:
             if request.GET.get('date', '01.01.1970'):
@@ -80,11 +103,23 @@ def cinemaRender(request, cinemaid):
                                                              "currentDate": currentDate,
                                                              "nextDays": nextDays,
                                                              "today": today,
-                                                             "schedule": schedule})
+                                                             "schedule": schedule,
+                                                             "currentUserPermissions": currentUser["permissions"]})
     return render(request, 'pages/404.html', {"username": auth.get_user(request).username})
 
 
 def movieRender(request, movieid):
+    username = auth.get_user(request).username
+    file = open("templates/db/users_db.json", "r", encoding="utf8")
+    users = json.loads(file.read())
+    file.close()
+    currentUser = {}
+    for user in users:
+        if username == user["username"]:
+            currentUser = user
+            break
+    if currentUser == {}:
+        currentUser["permissions"] = "not authorized"
     for movie in movies:
         if movie["id"] == movieid:
             im = Image.open("static/" + movie[
@@ -96,11 +131,24 @@ def movieRender(request, movieid):
                                                         "image_height": height,
                                                         "right_size": right_size,
                                                         "staffs": staffs,
-                                                        "username": auth.get_user(request).username})
-    return render(request, 'pages/404.html', {"username": auth.get_user(request).username})
+                                                        "username": auth.get_user(request).username,
+                                                        "currentUserPermissions": currentUser["permissions"]})
+    return render(request, 'pages/404.html', {"username": auth.get_user(request).username,
+                                              "currentUserPermissions": currentUser["permissions"]})
 
 
 def personRender(request, personid):
+    username = auth.get_user(request).username
+    file = open("templates/db/users_db.json", "r", encoding="utf8")
+    users = json.loads(file.read())
+    file.close()
+    currentUser = {}
+    for user in users:
+        if username == user["username"]:
+            currentUser = user
+            break
+    if currentUser == {}:
+        currentUser["permissions"] = "not authorized"
     for person in staffs:
         if person["id"] == personid:
             if person["image"]:
@@ -117,17 +165,31 @@ def personRender(request, personid):
                                                          "image_height": height,
                                                          "right_size": right_size,
                                                          "movies": movies,
-                                                         "username": auth.get_user(request).username})
-    return render(request, 'pages/404.html', {"username": auth.get_user(request).username})
+                                                         "username": auth.get_user(request).username,
+                                                         "currentUserPermissions": currentUser["permissions"]})
+    return render(request, 'pages/404.html', {"username": auth.get_user(request).username,
+                                              "currentUserPermissions": currentUser["permissions"]})
 
 
 def favoritesRender(request):
+    username = auth.get_user(request).username
+    file = open("templates/db/users_db.json", "r", encoding="utf8")
+    users = json.loads(file.read())
+    file.close()
+    currentUser = {}
+    for user in users:
+        if username == user["username"]:
+            currentUser = user
+            break
+    if currentUser == {}:
+        currentUser["permissions"] = "not authorized"
     username = auth.get_user(request).username
     currentDate = datetime.today().strftime("%d.%m.%Y")
     if username == "":
         return render(request, 'pages/favorites.html', {"login_error": "Вы не вошли в систему",
                                                         "username": auth.get_user(request).username,
-                                                        "currentDate": currentDate})
+                                                        "currentDate": currentDate,
+                                                        "currentUserPermissions": currentUser["permissions"]})
     else:
         file = open("templates/db/users_db.json", "r", encoding="utf8")
         favorites = json.loads(file.read())
@@ -141,4 +203,5 @@ def favoritesRender(request):
                             cinemas_for_render.append(cinema)
                 return render(request, 'pages/favorites.html', {"cinemas": cinemas_for_render,
                                                                 "username": auth.get_user(request).username,
-                                                                "currentDate": currentDate})
+                                                                "currentDate": currentDate,
+                                                                "currentUserPermissions": currentUser["permissions"]})

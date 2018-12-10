@@ -19,6 +19,9 @@
             <div class="header__right-block">
                 {% if username %}
                     Здравствуйте, {{ username }}
+                    {% if currentUserPermissions == "superuser" or currentUserPermissions == "moderator" %}
+                        <a href="/adminpanel" class="head__button"><span class="vertical_align">Админ</span></a>
+                    {% endif %}
                     <a href="/favorites" class="head__button"><span class="vertical_align">Избранное</span></a>
                     <a href="/auth/logout" class="head__button"><span class="vertical_align">Выйти</span></a>
                 {% else %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="adminpanel">
+        <a href="/adminpanel/addmoderator" class="admin__button">Выдать права модератора</a>
+        <a href="/adminpanel/deleteuser" class="admin__button">Удалить пользователя</a>
+        <a href="/adminpanel/addstuff" class="admin__button">Добавить актёра/режиссёра</a>
+        <a href="/adminpanel/deletestuff" class="admin__button">Удалить актёра/режиссёра</a>
+        <a href="/adminpanel/addmovie" class="admin__button">Добавить кинофильм</a>
+        <a href="/adminpanel/deletemovie" class="admin__button">Удалить кинофильм</a>
+        <a href="/adminpanel/addcinema" class="admin__button">Добавить кинотеатр</a>
+        <a href="/adminpanel/deletecinema" class="admin__button">Удалить кинотеатр</a>
+        <a href="/adminpanel/addsession" class="admin__button">Добавить сеанс</a>
+        <a href="/adminpanel/deletesession" class="admin__button">Удалить сеанс</a>
+        <a href="/adminpanel/uploadimage" class="admin__button">Загрузить картинку</a>
+    </div>
+{% endblock %}
