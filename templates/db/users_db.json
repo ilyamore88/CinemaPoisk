@@ -1,8 +1,9 @@
 [
   {
     "username": "ilyamore88",
+    "password": "12345678",
+    "permissions": "superuser",
     "favorites_cinemas_id": [
-      1,
       2
     ]
   }

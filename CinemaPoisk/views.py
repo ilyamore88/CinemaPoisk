@@ -30,19 +30,19 @@ def cinemaRender(request, cinemaid):
             if request.GET.get('change', 'no') == 'yes':
                 if auth.get_user(request).username == "":
                     return redirect("/favorites")
-                file = open("templates/db/favorites_db.json", "r", encoding="utf8")
-                favorites = json.loads(file.read())
+                file = open("templates/db/users_db.json", "r", encoding="utf8")
+                users = json.loads(file.read())
                 file.close()
-                for favorite in favorites:
-                    if favorite["username"] == auth.get_user(request).username:
-                        favorites.remove(favorite)
-                        if cinema["id"] in favorite["favorites_cinemas_id"]:
-                            favorite["favorites_cinemas_id"].remove(cinema["id"])
+                for user in users:
+                    if user["username"] == auth.get_user(request).username:
+                        users.remove(user)
+                        if cinema["id"] in user["favorites_cinemas_id"]:
+                            user["favorites_cinemas_id"].remove(cinema["id"])
                         else:
-                            favorite["favorites_cinemas_id"].append(cinema["id"])
-                        favorites.append(favorite)
-                        file = open("templates/db/favorites_db.json", "w", encoding="utf8")
-                        file.write(json.dumps(favorites))
+                            user["favorites_cinemas_id"].append(cinema["id"])
+                        users.append(user)
+                        file = open("templates/db/users_db.json", "w", encoding="utf8")
+                        file.write(json.dumps(users))
                         file.close()
                         return redirect("/cinema/" + str(cinema["id"]) + "?date=" + currentDate)
             else:
@@ -51,12 +51,12 @@ def cinemaRender(request, cinemaid):
                 (width, height) = im.size
                 right_size = 900 - 15 - width
                 isInFavorites = False
-                file = open("templates/db/favorites_db.json", "r", encoding="utf8")
-                favorites = json.loads(file.read())
+                file = open("templates/db/users_db.json", "r", encoding="utf8")
+                users = json.loads(file.read())
                 file.close()
-                for favorite in favorites:
-                    if favorite["username"] == auth.get_user(request).username:
-                        if cinema["id"] in favorite["favorites_cinemas_id"]:
+                for user in users:
+                    if user["username"] == auth.get_user(request).username:
+                        if cinema["id"] in user["favorites_cinemas_id"]:
                             isInFavorites = True
                         else:
                             isInFavorites = False
@@ -129,7 +129,7 @@ def favoritesRender(request):
                                                         "username": auth.get_user(request).username,
                                                         "currentDate": currentDate})
     else:
-        file = open("templates/db/favorites_db.json", "r", encoding="utf8")
+        file = open("templates/db/users_db.json", "r", encoding="utf8")
         favorites = json.loads(file.read())
         file.close()
         for user in favorites:
