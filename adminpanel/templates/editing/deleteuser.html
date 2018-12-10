@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <form action="/adminpanel/deleteuser" method="post" class="adminpanel">
+        {% csrf_token %}
+        <label for="username" class="admin__text_label">Удалить пользователя (username):</label>
+        <input type="text" name="username" id="username" class="admin__input">
+        {% if login_error %}
+            <label class="error">{{ login_error }}</label>
+        {% endif %}
+        <input class="admin__button" type="submit" value="Удалить пользователя">
+    </form>
+{% endblock %}

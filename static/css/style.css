@@ -621,14 +621,43 @@ footer {
     color: #ffffff;
     text-decoration: none;
     margin-bottom: 10px;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-left-width: 0px;
+    border-bottom-width: 0px;
 }
 
 .admin__button:hover {
     background: #202020;
     color: #f6f6f6;
+    cursor: pointer;
 }
 
 .admin__button:active {
     position: relative;
     top: 1px;
+}
+
+.admin__input {
+    margin-bottom: 15px;
+    height: 40px;
+    width: 100%;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #202020;
+    text-align: center;
+    border-color: #292929;
+    font-family: fira_sansregular;
+}
+
+.admin__input:-webkit-autofill {
+    -webkit-box-shadow: inset 0 0 0 50px #fff !important; /* Цвет фона */
+    -webkit-text-fill-color: #202020 !important; /* цвет текста */
+    color: #202020 !important; /* цвет текста */
+}
+
+.admin__text_label {
+    margin-left: 5px;
+    font-family: fira_sansregular;
+    font-size: 14px;
 }
