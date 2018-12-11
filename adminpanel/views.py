@@ -574,3 +574,55 @@ def addsession(request):
         return render(request, 'editing/addsession.html', args)
     else:
         return render(request, 'editing/addsession.html', args)
+
+
+def deletesession(request):
+    username = auth.get_user(request).username
+    file = open("templates/db/users_db.json", "r", encoding="utf8")
+    users = json.loads(file.read())
+    file.close()
+    currentUser = {}
+    for user in users:
+        if username == user["username"]:
+            currentUser = user
+            break
+    if currentUser == {}:
+        return redirect('/adminpanel/loginerror')
+    elif (currentUser["permissions"] != "superuser") and (currentUser["permissions"] != "moderator"):
+        auth.logout(request)
+        return redirect('/adminpanel/loginerror')
+    args = {}
+    args.update(csrf(request))
+    args["username"] = currentUser["username"]
+    args["permissions"] = currentUser["permissions"]
+    if request.POST:
+        id_cinema = int(request.POST.get('id_cinema', ))
+        date = str(request.POST.get('date', '01.01.1970'))
+        time = str(request.POST.get('time', ''))
+
+        day, month, year = list(map(int, date.split('.')))
+        hour, minute = list(map(int, time.split(':')))
+
+        if (day < 1) or (day > 31) or (month < 0) or (month > 12) or (year < 1970) or (hour < 0) or (hour > 23) or (
+                minute < 0) or (minute > 59):
+            args["input_error"] = "Проверьте корректность введённых данных"
+            return render(request, 'editing/deletesession.html', args)
+
+        file = open("templates/db/cinemas_db.json", "r", encoding="utf8")
+        cinemas = json.loads(file.read())
+        file.close()
+        for cinema in cinemas:
+            if id_cinema == cinema["id"]:
+                for dateInSessions in cinema["schedule"]:
+                    if date == dateInSessions["date"]:
+                        for sessionInDate in dateInSessions["sessions"]:
+                            if time == sessionInDate["time"]:
+                                dateInSessions["sessions"].remove(sessionInDate)
+                                file = open("templates/db/cinemas_db.json", "w", encoding="utf8")
+                                file.write(json.dumps(cinemas, ensure_ascii=False))
+                                file.close()
+                                return redirect('/adminpanel')
+        args["input_error"] = "Проверьте корректность введённых данных"
+        return render(request, 'editing/deletesession.html', args)
+    else:
+        return render(request, 'editing/deletesession.html', args)

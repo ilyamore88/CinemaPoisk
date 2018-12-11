@@ -377,12 +377,6 @@
             "format": "2D"
           },
           {
-            "film_id": 3,
-            "time": "17:55",
-            "price": 210,
-            "format": "2D"
-          },
-          {
             "film_id": 2,
             "time": "23:30",
             "price": 210,
