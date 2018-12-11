@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <form action="/movie/{{ movie.id }}/edit" method="post" class="adminpanel">
+        {% csrf_token %}
+        <label for="name" class="admin__text_label">Название фильма:</label>
+        <input type="text" name="name" id="name" class="admin__input" value="{{ movie.name }}">
+        <label for="image" class="admin__text_label">Название фотографии:</label>
+        <input type="text" name="image" id="image" class="admin__input" value="{{ movie.image }}">
+        <label for="description" class="admin__text_label">Описание:</label>
+        <textarea name="description" id="description"
+                  class="admin__input description_input">
+            {{ movie.description }}
+        </textarea>
+        <label for="duration" class="admin__text_label">Продолжительность:</label>
+        <input type="text" name="duration" id="duration" class="admin__input" value="{{ movie.duration }}">
+        <label for="age_rating" class="admin__text_label">Возрастной рейтинг:</label>
+        <input type="text" name="age_rating" id="age_rating" class="admin__input" value="{{ movie.age_rating }}">
+        <label for="director_id" class="admin__text_label">Режиссёр (id):</label>
+        <input type="text" name="director_id" id="director_id" class="admin__input" value="{{ movie.director_id }}">
+        <label for="actors_id" class="admin__text_label">Актёры (id через запятую):</label>
+        <input type="text" name="actors_id" id="actors_id" class="admin__input"
+               value="{% for actor_id in movie.actors_id %}{{ actor_id }},{% endfor %}">
+        {% if input_error %}
+            <label class="error">{{ input_error }}</label>
+        {% endif %}
+        <input class="admin__button" type="submit" value="Сохранить">
+    </form>
+{% endblock %}

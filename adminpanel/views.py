@@ -669,3 +669,46 @@ def editcinema(request, cinemaid):
             else:
                 return render(request, 'editing/editcinema.html', args)
     return redirect('/cinema/' + str(cinemaid) + "?date=" + currentDate)
+
+
+def editmovie(request, movieid):
+    username = auth.get_user(request).username
+    file = open("templates/db/users_db.json", "r", encoding="utf8")
+    users = json.loads(file.read())
+    file.close()
+    currentUser = {}
+    for user in users:
+        if username == user["username"]:
+            currentUser = user
+            break
+    if currentUser == {}:
+        return redirect('/adminpanel/loginerror')
+    elif (currentUser["permissions"] != "superuser") and (currentUser["permissions"] != "moderator"):
+        auth.logout(request)
+        return redirect('/adminpanel/loginerror')
+    args = {}
+    args.update(csrf(request))
+    args["username"] = currentUser["username"]
+    args["permissions"] = currentUser["permissions"]
+    file = open("templates/db/movies_db.json", "r", encoding="utf8")
+    movies = json.loads(file.read())
+    file.close()
+    for movie in movies:
+        if movieid == movie["id"]:
+            args["movie"] = movie
+            if request.POST:
+                movie["name"] = str(request.POST.get('name', ''))
+                movie["image"] = request.POST.get('image', '')
+                movie["duration"] = str(request.POST.get('duration', ''))
+                movie["description"] = str(request.POST.get('description', ''))
+                movie["age_rating"] = str(request.POST.get('age_rating', ''))
+                movie["director_id"] = int(request.POST.get('director_id', ''))
+                movie["actors_id"] = list(map(int, request.POST.get('actors_id', '').split(','))) if request.POST.get(
+                    'actors_id', '') != '' else []
+                file = open("templates/db/movies_db.json", "w", encoding="utf8")
+                file.write(json.dumps(movies, ensure_ascii=False))
+                file.close()
+                return redirect('/movie/' + str(movieid))
+            else:
+                return render(request, 'editing/editmovie.html', args)
+    return redirect('/movie/' + str(movieid))

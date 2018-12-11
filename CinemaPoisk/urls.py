@@ -10,7 +10,7 @@ urlpatterns = [
     path('cinema/<int:cinemaid>', views.cinemaRender),
     path('cinema/<int:cinemaid>/edit', adminviews.editcinema),
     path('movie/<int:movieid>', views.movieRender),
-    path('cinema/<int:cinemaid>/edit', views.cinemaRender),
+    path('movie/<int:movieid>/edit', adminviews.editmovie),
     path('person/<int:personid>', views.personRender),
     path('cinema/<int:cinemaid>/edit', views.cinemaRender),
     path('favorites', views.favoritesRender),

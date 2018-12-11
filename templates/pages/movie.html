@@ -26,6 +26,9 @@
             </div>
             <div class="info">Продолжительность: {{ movie.duration }}</div>
             <div class="info">Возрастной рейтинг: {{ movie.age_rating }}</div>
+            {% if currentUserPermissions == "superuser" or currentUserPermissions == "moderator" %}
+                <a href="/movie/{{ movie.id }}/edit" class="edit__link" style="top: 12px;">Изменить</a>
+            {% endif %}
         </div>
 
     </div>
