@@ -712,3 +712,48 @@ def editmovie(request, movieid):
             else:
                 return render(request, 'editing/editmovie.html', args)
     return redirect('/movie/' + str(movieid))
+
+
+def editstuff(request, personid):
+    username = auth.get_user(request).username
+    file = open("templates/db/users_db.json", "r", encoding="utf8")
+    users = json.loads(file.read())
+    file.close()
+    currentUser = {}
+    for user in users:
+        if username == user["username"]:
+            currentUser = user
+            break
+    if currentUser == {}:
+        return redirect('/adminpanel/loginerror')
+    elif (currentUser["permissions"] != "superuser") and (currentUser["permissions"] != "moderator"):
+        auth.logout(request)
+        return redirect('/adminpanel/loginerror')
+    args = {}
+    args.update(csrf(request))
+    args["username"] = currentUser["username"]
+    args["permissions"] = currentUser["permissions"]
+    file = open("templates/db/staffs_db.json", "r", encoding="utf8")
+    staffs = json.loads(file.read())
+    file.close()
+    for person in staffs:
+        if personid == person["id"]:
+            args["person"] = person
+            if request.POST:
+                person["last_name"] = str(request.POST.get('last_name', ''))
+                person["first_name"] = str(request.POST.get('first_name', ''))
+                person["middle_name"] = str(request.POST.get('middle_name', ''))
+                person["image"] = request.POST.get('image', '')
+                person["actor_films_id"] = list(
+                    map(int, request.POST.get('actor_films_id', '').split(','))) if request.POST.get(
+                    'actor_films_id', '') != '' else []
+                person["director_films_id"] = list(
+                    map(int, request.POST.get('director_films_id', '').split(','))) if request.POST.get(
+                    'director_films_id', '') != '' else []
+                file = open("templates/db/staffs_db.json", "w", encoding="utf8")
+                file.write(json.dumps(staffs, ensure_ascii=False))
+                file.close()
+                return redirect('/person/' + str(personid))
+            else:
+                return render(request, 'editing/editstuff.html', args)
+    return redirect('/person/' + str(personid))

@@ -29,6 +29,9 @@
                     {% endfor %}
                 </div>
             {% endif %}
+            {% if currentUserPermissions == "superuser" or currentUserPermissions == "moderator" %}
+                <a href="/person/{{ person.id }}/edit" class="edit__link" style="top: 12px;">Изменить</a>
+            {% endif %}
         </div>
     </div>
 {% endblock %}

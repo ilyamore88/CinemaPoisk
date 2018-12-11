@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <form action="/person/{{ person.id }}/edit" method="post" class="adminpanel">
+        {% csrf_token %}
+        <label for="last_name" class="admin__text_label">Фамилия:</label>
+        <input type="text" name="last_name" id="last_name" class="admin__input" value="{{ person.last_name }}">
+        <label for="first_name" class="admin__text_label">Имя:</label>
+        <input type="text" name="first_name" id="first_name" class="admin__input" value="{{ person.first_name }}">
+        <label for="middle_name" class="admin__text_label">Отчество:</label>
+        <input type="text" name="middle_name" id="middle_name" class="admin__input" value="{{ person.middle_name }}">
+        <label for="image" class="admin__text_label">Название фотографии:</label>
+        <input type="text" name="image" id="image" class="admin__input" value="{{ person.image }}">
+        <label for="actor_films_id" class="admin__text_label">Фильмы, в которых он снялся (id через запятую):</label>
+        <input type="text" name="actor_films_id" id="actor_films_id" class="admin__input"
+               value="{% for actor_id in person.actor_films_id %}{{ actor_id }},{% endfor %}">
+        <label for="director_films_id" class="admin__text_label">Фильмы, которые он срежессировал (id через
+            запятую):</label>
+        <input type="text" name="director_films_id" id="director_films_id" class="admin__input"
+               value="{% for director_id in person.director_films_id %}{{ director_id }},{% endfor %}">
+        {% if input_error %}
+            <label class="error">{{ input_error }}</label>
+        {% endif %}
+        <input class="admin__button" type="submit" value="Сохранить">
+    </form>
+{% endblock %}
