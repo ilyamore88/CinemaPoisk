@@ -425,3 +425,45 @@ def addcinema(request):
             return render(request, 'editing/addcinema.html', args)
     else:
         return render(request, 'editing/addcinema.html', args)
+
+
+def deletecinema(request):
+    username = auth.get_user(request).username
+    file = open("templates/db/users_db.json", "r", encoding="utf8")
+    users = json.loads(file.read())
+    file.close()
+    currentUser = {}
+    for user in users:
+        if username == user["username"]:
+            currentUser = user
+            break
+    if currentUser == {}:
+        return redirect('/adminpanel/loginerror')
+    elif (currentUser["permissions"] != "superuser") and (currentUser["permissions"] != "moderator"):
+        auth.logout(request)
+        return redirect('/adminpanel/loginerror')
+    args = {}
+    args.update(csrf(request))
+    args["username"] = currentUser["username"]
+    args["permissions"] = currentUser["permissions"]
+    if request.POST:
+        id = int(request.POST.get('id', ''))
+        file = open("templates/db/cinemas_db.json", "r", encoding="utf8")
+        cinemas = json.loads(file.read())
+        file.close()
+        isID = False
+        for cinema in cinemas:
+            if id == cinema["id"]:
+                isID = True
+                break
+        if isID:
+            cinemas.remove(cinema)
+            file = open("templates/db/cinemas_db.json", "w", encoding="utf8")
+            file.write(json.dumps(cinemas, ensure_ascii=False))
+            file.close()
+            return redirect('/adminpanel')
+        else:
+            args["input_error"] = "Такой кинотеатр не найден"
+            return render(request, 'editing/deletecinema.html', args)
+    else:
+        return render(request, 'editing/deletecinema.html', args)
