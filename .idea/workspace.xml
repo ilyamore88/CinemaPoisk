@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf48dfb8-63e3-4813-855f-a25d8ba34c83" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/adminpanel/templates/editing/deletemovie.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adminpanel/templates/editing/addcinema.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CinemaPoisk/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/CinemaPoisk/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CinemaPoisk/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/CinemaPoisk/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adminpanel/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/adminpanel/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/db/cinemas_db.json" beforeDir="false" afterPath="$PROJECT_DIR$/templates/db/cinemas_db.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,8 +58,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CinemaPoisk/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="130" column="49" selection-start-line="130" selection-start-column="49" selection-end-line="130" selection-end-column="49" />
+            <state relative-caret-position="494">
+              <caret line="71" column="54" selection-start-line="71" selection-start-column="54" selection-end-line="71" selection-end-column="54" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -65,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/adminpanel/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="363" column="53" selection-start-line="363" selection-start-column="53" selection-end-line="363" selection-end-column="53" />
+            <state relative-caret-position="239">
+              <caret line="401" column="46" selection-start-line="401" selection-start-column="46" selection-end-line="401" selection-end-column="46" />
               <folding>
                 <element signature="e#1#46#0" expanded="true" />
                 <element signature="e#227#783#0" />
@@ -79,25 +81,26 @@
                 <element signature="e#3840#5287#0" />
                 <element signature="e#5148#6911#0" />
                 <element signature="e#8116#10154#0" />
+                <element signature="e#13133#15211#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/adminpanel/templates/editing/deletemovie.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/db/cinemas_db.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="71" selection-start-line="10" selection-start-column="71" selection-end-line="10" selection-end-column="71" />
+            <state>
+              <caret column="15655" selection-start-column="15655" selection-end-column="15655" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/adminpanel/templates/editing/deletestuff.html">
+        <entry file="file://$PROJECT_DIR$/adminpanel/templates/editing/addcinema.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="12" selection-end-column="14" />
+            <state relative-caret-position="374">
+              <caret line="22" column="76" selection-start-line="22" selection-start-column="76" selection-end-line="22" selection-end-column="76" />
             </state>
           </provider>
         </entry>
@@ -105,8 +108,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/adminpanel/templates/editing/addmovie.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="74" selection-start-line="12" selection-start-column="74" selection-end-line="12" selection-end-column="74" />
+            <state>
+              <caret selection-end-line="26" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/pages/cinema.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -114,17 +126,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/db/movies_db.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-125">
-              <caret column="1" selection-start-column="1" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/adminpanel/templates/editing/deleteuser.html">
-          <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret selection-end-line="12" selection-end-column="14" />
+              <caret column="1" selection-start-column="1" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -141,8 +144,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/db/staffs_db.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="173" column="1" selection-start-line="173" selection-start-column="1" selection-end-line="173" selection-end-column="1" />
+            <state relative-caret-position="375">
+              <caret line="166" column="1" selection-start-line="166" selection-start-column="1" selection-end-line="166" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -150,8 +153,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CinemaPoisk/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+            <state relative-caret-position="391">
+              <caret line="23" column="53" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -212,7 +215,6 @@
         <option value="$PROJECT_DIR$/templates/pages/cinemas_edit.html" />
         <option value="$PROJECT_DIR$/templates/pages/cinemas.html" />
         <option value="$PROJECT_DIR$/templates/pages/cinema.html" />
-        <option value="$PROJECT_DIR$/templates/db/cinemas_db.json" />
         <option value="$PROJECT_DIR$/templates/pages/favorites.html" />
         <option value="$PROJECT_DIR$/templates/pages/404.html" />
         <option value="$PROJECT_DIR$/templates/db/favorites_db.json" />
@@ -226,14 +228,16 @@
         <option value="$PROJECT_DIR$/adminpanel/templates/editing/addmoderator.html" />
         <option value="$PROJECT_DIR$/adminpanel/templates/editing/addstuff.html" />
         <option value="$PROJECT_DIR$/adminpanel/templates/editing/deletestuff.html" />
-        <option value="$PROJECT_DIR$/templates/db/staffs_db.json" />
-        <option value="$PROJECT_DIR$/CinemaPoisk/views.py" />
-        <option value="$PROJECT_DIR$/templates/db/movies_db.json" />
         <option value="$PROJECT_DIR$/adminpanel/templates/editing/addmovie.html" />
         <option value="$PROJECT_DIR$/static/css/style.css" />
-        <option value="$PROJECT_DIR$/adminpanel/views.py" />
         <option value="$PROJECT_DIR$/adminpanel/templates/editing/deletemovie.html" />
+        <option value="$PROJECT_DIR$/templates/db/staffs_db.json" />
+        <option value="$PROJECT_DIR$/adminpanel/templates/editing/addcinema.html" />
         <option value="$PROJECT_DIR$/CinemaPoisk/urls.py" />
+        <option value="$PROJECT_DIR$/templates/db/movies_db.json" />
+        <option value="$PROJECT_DIR$/CinemaPoisk/views.py" />
+        <option value="$PROJECT_DIR$/adminpanel/views.py" />
+        <option value="$PROJECT_DIR$/templates/db/cinemas_db.json" />
       </list>
     </option>
   </component>
@@ -279,17 +283,6 @@
               <item name="CinemaPoisk" type="b2602c69:ProjectViewProjectNode" />
               <item name="CinemaPoisk" type="462c0819:PsiDirectoryNode" />
               <item name="CinemaPoisk" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CinemaPoisk" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CinemaPoisk" type="462c0819:PsiDirectoryNode" />
-              <item name="loginsys" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CinemaPoisk" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CinemaPoisk" type="462c0819:PsiDirectoryNode" />
-              <item name="loginsys" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CinemaPoisk" type="b2602c69:ProjectViewProjectNode" />
@@ -411,7 +404,7 @@
       <workItem from="1543958281043" duration="7077000" />
       <workItem from="1543966190236" duration="1318000" />
       <workItem from="1544043324543" duration="285000" />
-      <workItem from="1544474544751" duration="15477000" />
+      <workItem from="1544474544751" duration="16865000" />
     </task>
     <task id="LOCAL-00001" summary="init project files">
       <created>1541004288716</created>
@@ -581,11 +574,18 @@
       <option name="project" value="LOCAL" />
       <updated>1544489994335</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="add deleting movies">
+      <created>1544490422300</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1544490422301</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74624000" />
+    <option name="totallyTimeSpent" value="76012000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -674,7 +674,8 @@
     <MESSAGE value="add adding staffs" />
     <MESSAGE value="add deleting staffs" />
     <MESSAGE value="add adding movies" />
-    <option name="LAST_COMMIT_MESSAGE" value="add adding movies" />
+    <MESSAGE value="add deleting movies" />
+    <option name="LAST_COMMIT_MESSAGE" value="add deleting movies" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
@@ -818,24 +819,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/db/cinemas_db.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17850">
-          <caret line="1050" column="5" selection-start-line="1050" selection-start-column="5" selection-end-line="1050" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/pages/favorites.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="72" selection-start-line="13" selection-start-column="72" selection-end-line="13" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/pages/cinema.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-16">
-          <caret selection-end-line="51" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -905,41 +892,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CinemaPoisk/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="130" column="49" selection-start-line="130" selection-start-column="49" selection-end-line="130" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/adminpanel/templates/editing/deleteuser.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="12" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/db/staffs_db.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="173" column="1" selection-start-line="173" selection-start-column="1" selection-end-line="173" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/db/movies_db.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-125">
-          <caret column="1" selection-start-column="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adminpanel/templates/editing/addmovie.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="74" selection-start-line="12" selection-start-column="74" selection-end-line="12" selection-end-column="74" />
         </state>
       </provider>
     </entry>
@@ -957,16 +913,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CinemaPoisk/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/adminpanel/templates/editing/deletemovie.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -974,10 +920,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/db/staffs_db.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="166" column="1" selection-start-line="166" selection-start-column="1" selection-end-line="166" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CinemaPoisk/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="53" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/db/movies_db.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adminpanel/templates/editing/addmovie.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="26" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pages/cinema.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adminpanel/templates/editing/addcinema.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="76" selection-start-line="22" selection-start-column="76" selection-end-line="22" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CinemaPoisk/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="71" column="54" selection-start-line="71" selection-start-column="54" selection-end-line="71" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/adminpanel/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="363" column="53" selection-start-line="363" selection-start-column="53" selection-end-line="363" selection-end-column="53" />
+        <state relative-caret-position="239">
+          <caret line="401" column="46" selection-start-line="401" selection-start-column="46" selection-end-line="401" selection-end-column="46" />
           <folding>
             <element signature="e#1#46#0" expanded="true" />
             <element signature="e#227#783#0" />
@@ -987,7 +988,15 @@
             <element signature="e#3840#5287#0" />
             <element signature="e#5148#6911#0" />
             <element signature="e#8116#10154#0" />
+            <element signature="e#13133#15211#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/db/cinemas_db.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="15655" selection-start-column="15655" selection-end-column="15655" />
         </state>
       </provider>
     </entry>

@@ -21,4 +21,5 @@ urlpatterns = [
     path('adminpanel/deletestuff', adminviews.deletestuff),
     path('adminpanel/addmovie', adminviews.addmovie),
     path('adminpanel/deletemovie', adminviews.deletemovie),
+    path('adminpanel/addcinema', adminviews.addcinema),
 ]

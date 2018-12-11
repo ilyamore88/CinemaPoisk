@@ -374,3 +374,54 @@ def deletemovie(request):
             return render(request, 'editing/deletemovie.html', args)
     else:
         return render(request, 'editing/deletemovie.html', args)
+
+
+def addcinema(request):
+    username = auth.get_user(request).username
+    file = open("templates/db/users_db.json", "r", encoding="utf8")
+    users = json.loads(file.read())
+    file.close()
+    currentUser = {}
+    for user in users:
+        if username == user["username"]:
+            currentUser = user
+            break
+    if currentUser == {}:
+        return redirect('/adminpanel/loginerror')
+    elif (currentUser["permissions"] != "superuser") and (currentUser["permissions"] != "moderator"):
+        auth.logout(request)
+        return redirect('/adminpanel/loginerror')
+    args = {}
+    args.update(csrf(request))
+    args["username"] = currentUser["username"]
+    args["permissions"] = currentUser["permissions"]
+    if request.POST:
+        id = int(request.POST.get('id', ))
+        name = str(request.POST.get('name', ''))
+        image_name = ("images/cinemas/" + request.POST.get('image', '')) if request.POST.get('image', '') != '' else ""
+        tel = str(request.POST.get('tel', ''))
+        description = request.POST.get('description', []).split("\r\n")
+        subway = str(request.POST.get('subway', ''))
+        address = str(request.POST.get('address', ''))
+        file = open("templates/db/cinemas_db.json", "r", encoding="utf8")
+        cinemas = json.loads(file.read())
+        file.close()
+        isID = False
+        for cinema in cinemas:
+            if id == cinema["id"]:
+                isID = True
+                break
+        if isID == False:
+            cinemas.append({"id": id, "name": name,
+                            "image": image_name, "tel": tel, "address": address,
+                            "description": description, "subway": subway,
+                            "schedule": []})
+            file = open("templates/db/cinemas_db.json", "w", encoding="utf8")
+            file.write(json.dumps(cinemas, ensure_ascii=False))
+            file.close()
+            return redirect('/adminpanel')
+        else:
+            args["input_error"] = "Кинотеатр с таким ID уже существует!"
+            return render(request, 'editing/addcinema.html', args)
+    else:
+        return render(request, 'editing/addcinema.html', args)

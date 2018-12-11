@@ -68,10 +68,15 @@ def cinemaRender(request, cinemaid):
                         file.close()
                         return redirect("/cinema/" + str(cinema["id"]) + "?date=" + currentDate)
             else:
-                im = Image.open("static/" + cinema[
-                    "image"])  # Это библиотека для работы с изображениями. Я получаю размер, чтобы потом корректно отображать на странице
-                (width, height) = im.size
-                right_size = 900 - 15 - width
+                if cinema["image"]:
+                    im = Image.open("static/" + cinema[
+                        "image"])  # Это библиотека для работы с изображениями. Я получаю размер, чтобы потом корректно отображать на странице
+                    (width, height) = im.size
+                    right_size = 900 - 15 - width
+                else:
+                    width = 300
+                    height = 400
+                    right_size = 900 - 15 - width
                 isInFavorites = False
                 file = open("templates/db/users_db.json", "r", encoding="utf8")
                 users = json.loads(file.read())

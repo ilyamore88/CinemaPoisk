@@ -1049,5 +1049,33 @@
         ]
       }
     ]
+  },
+  {
+    "id": 5,
+    "name": "Личный",
+    "image": "",
+    "tel": "+79997778855",
+    "address": "Улица Пушкина, дом Колотушкина",
+    "description": [
+      "Мой личный кинотеатр. (Уже 4:18) (Я умру сегодня)) А я и не против))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))) постиrоnic ??7 хм"
+    ],
+    "subway": "Горьковская",
+    "schedule": []
+  },
+  {
+    "id": 6,
+    "name": "dfsfdgdfgdf",
+    "image": "",
+    "tel": "bfgbfgb",
+    "address": "bfgbfgbf",
+    "description": [
+      "fsdfsd",
+      "sdfsdfsdf",
+      "sdfsdfsdf",
+      "45345dfsdf",
+      "43rgdfvxcv"
+    ],
+    "subway": "gbfgbfg",
+    "schedule": []
   }
 ]
