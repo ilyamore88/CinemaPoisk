@@ -458,8 +458,11 @@ footer {
 }
 
 .error {
+    display: block;
     text-align: center;
     color: #ff0000;
+    font-family: fira_sansregular;
+    font-size: 14px;
 }
 
 .form__button {
