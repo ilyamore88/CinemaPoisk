@@ -3,7 +3,7 @@
 {% block content %}
     <form action="/adminpanel/addmoderator" method="post" class="adminpanel">
         {% csrf_token %}
-        <label for="username" class="admin__text_label">Выдать права администратора (username):</label>
+        <label for="username" class="admin__text_label">Выдать права модератора (username):</label>
         <input type="text" name="username" id="username" class="admin__input">
         {% if input_error %}
             <label class="error">{{ input_error }}</label>

@@ -104,6 +104,46 @@ def addmoderator(request):
         return render(request, 'editing/addmoderator.html', args)
 
 
+def deletemoderator(request):
+    username = auth.get_user(request).username
+    file = open("templates/db/users_db.json", "r", encoding="utf8")
+    users = json.loads(file.read())
+    file.close()
+    currentUser = {}
+    for user in users:
+        if username == user["username"]:
+            currentUser = user
+            break
+    if currentUser == {}:
+        return redirect('/adminpanel/loginerror')
+    elif currentUser["permissions"] != "superuser":
+        auth.logout(request)
+        return redirect('/adminpanel/loginerror')
+    args = {}
+    args.update(csrf(request))
+    args["username"] = currentUser["username"]
+    args["permissions"] = currentUser["permissions"]
+    if request.POST:
+        username = request.POST.get('username', '')
+        userModerator = {}
+        for user in users:
+            if user["username"] == username:
+                userModerator = user
+                users.remove(user)
+                break
+        if userModerator != {}:
+            userModerator["permissions"] = "user"
+            users.append(userModerator)
+            file = open("templates/db/users_db.json", "w", encoding="utf8")
+            file.write(json.dumps(users))
+            file.close()
+            return redirect('/adminpanel')
+        else:
+            args["input_error"] = "Пользователь не найден"
+            return render(request, 'editing/deletemoderator.html', args)
+    else:
+        return render(request, 'editing/deletemoderator.html', args)
+
 def deleteuser(request):
     username = auth.get_user(request).username
     file = open("templates/db/users_db.json", "r", encoding="utf8")

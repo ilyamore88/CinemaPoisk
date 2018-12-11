@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf48dfb8-63e3-4813-855f-a25d8ba34c83" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/adminpanel/templates/editing/deletecinema.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adminpanel/templates/editing/deletemoderator.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CinemaPoisk/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/CinemaPoisk/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminpanel/templates/admins_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/adminpanel/templates/admins_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminpanel/templates/editing/addmoderator.html" beforeDir="false" afterPath="$PROJECT_DIR$/adminpanel/templates/editing/addmoderator.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adminpanel/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/adminpanel/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,53 +57,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CinemaPoisk/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="71" column="54" selection-start-line="71" selection-start-column="54" selection-end-line="71" selection-end-column="54" />
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adminpanel/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="596">
-              <caret line="468" column="52" selection-start-line="468" selection-start-column="52" selection-end-line="468" selection-end-column="52" />
+            <state relative-caret-position="650">
+              <caret line="144" column="47" lean-forward="true" selection-start-line="144" selection-start-column="47" selection-end-line="144" selection-end-column="47" />
               <folding>
-                <element signature="e#1#46#0" expanded="true" />
-                <element signature="e#227#783#0" />
-                <element signature="e#227#751#0" />
-                <element signature="e#950#1642#0" />
-                <element signature="e#2358#4106#0" />
-                <element signature="e#3840#5287#0" />
-                <element signature="e#5148#6911#0" />
-                <element signature="e#8116#10154#0" />
-                <element signature="e#10224#12819#0" />
                 <element signature="e#13133#15209#0" />
-                <element signature="e#15240#18117#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/db/cinemas_db.json">
+        <entry file="file://$PROJECT_DIR$/adminpanel/templates/editing/deletemoderator.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="1080" column="1" selection-start-line="1080" selection-start-column="1" selection-end-line="1080" selection-end-column="1" />
+            <state relative-caret-position="170">
+              <caret line="10" column="65" selection-start-line="10" selection-start-column="65" selection-end-line="10" selection-end-column="65" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/adminpanel/templates/editing/deletecinema.html">
+        <entry file="file://$PROJECT_DIR$/adminpanel/templates/editing/addmoderator.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="5" column="67" selection-start-line="5" selection-start-column="67" selection-end-line="5" selection-end-column="67" />
+              <caret line="5" column="79" selection-start-line="5" selection-start-column="79" selection-end-line="5" selection-end-column="79" />
             </state>
           </provider>
         </entry>
@@ -126,8 +107,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/pages/cinema.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+            <state relative-caret-position="289">
+              <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -144,11 +125,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CinemaPoisk/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="59" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
+            <state relative-caret-position="306">
+              <caret line="18" column="65" selection-start-line="18" selection-start-column="65" selection-end-line="18" selection-end-column="65" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/adminpanel/templates/admins_page.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="75" selection-start-line="5" selection-start-column="75" selection-end-line="5" selection-end-column="75" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="606" column="14" selection-start-line="606" selection-start-column="14" selection-end-line="606" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -209,27 +208,28 @@
         <option value="$PROJECT_DIR$/templates/pages/favorites.html" />
         <option value="$PROJECT_DIR$/templates/pages/404.html" />
         <option value="$PROJECT_DIR$/templates/db/favorites_db.json" />
-        <option value="$PROJECT_DIR$/adminpanel/templates/admins_page.html" />
         <option value="$PROJECT_DIR$/CinemaPoisk/settings.py" />
         <option value="$PROJECT_DIR$/loginsys/views.py" />
         <option value="$PROJECT_DIR$/adminpanel/templates/moderators_page.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/templates/db/users_db.json" />
         <option value="$PROJECT_DIR$/adminpanel/templates/editing/deleteuser.html" />
-        <option value="$PROJECT_DIR$/adminpanel/templates/editing/addmoderator.html" />
         <option value="$PROJECT_DIR$/adminpanel/templates/editing/addstuff.html" />
         <option value="$PROJECT_DIR$/adminpanel/templates/editing/deletestuff.html" />
         <option value="$PROJECT_DIR$/adminpanel/templates/editing/addmovie.html" />
-        <option value="$PROJECT_DIR$/static/css/style.css" />
         <option value="$PROJECT_DIR$/adminpanel/templates/editing/deletemovie.html" />
         <option value="$PROJECT_DIR$/templates/db/staffs_db.json" />
         <option value="$PROJECT_DIR$/adminpanel/templates/editing/addcinema.html" />
         <option value="$PROJECT_DIR$/templates/db/movies_db.json" />
         <option value="$PROJECT_DIR$/CinemaPoisk/views.py" />
         <option value="$PROJECT_DIR$/templates/db/cinemas_db.json" />
-        <option value="$PROJECT_DIR$/adminpanel/views.py" />
         <option value="$PROJECT_DIR$/adminpanel/templates/editing/deletecinema.html" />
+        <option value="$PROJECT_DIR$/adminpanel/views.py" />
+        <option value="$PROJECT_DIR$/adminpanel/templates/editing/addmoderator.html" />
+        <option value="$PROJECT_DIR$/adminpanel/templates/editing/deletemoderator.html" />
         <option value="$PROJECT_DIR$/CinemaPoisk/urls.py" />
+        <option value="$PROJECT_DIR$/adminpanel/templates/admins_page.html" />
+        <option value="$PROJECT_DIR$/static/css/style.css" />
       </list>
     </option>
   </component>
@@ -275,6 +275,11 @@
               <item name="CinemaPoisk" type="b2602c69:ProjectViewProjectNode" />
               <item name="CinemaPoisk" type="462c0819:PsiDirectoryNode" />
               <item name="CinemaPoisk" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CinemaPoisk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CinemaPoisk" type="462c0819:PsiDirectoryNode" />
+              <item name="loginsys" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CinemaPoisk" type="b2602c69:ProjectViewProjectNode" />
@@ -396,7 +401,8 @@
       <workItem from="1543958281043" duration="7077000" />
       <workItem from="1543966190236" duration="1318000" />
       <workItem from="1544043324543" duration="285000" />
-      <workItem from="1544474544751" duration="17133000" />
+      <workItem from="1544474544751" duration="17263000" />
+      <workItem from="1544549899541" duration="632000" />
     </task>
     <task id="LOCAL-00001" summary="init project files">
       <created>1541004288716</created>
@@ -580,11 +586,18 @@
       <option name="project" value="LOCAL" />
       <updated>1544491750294</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="add deleting cinemas">
+      <created>1544492092905</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1544492092905</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76280000" />
+    <option name="totallyTimeSpent" value="77042000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -599,10 +612,9 @@
     <frame x="-8" y="-8" width="1616" height="916" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24871466" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25192803" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.32950193" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32950193" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32950193" />
@@ -616,6 +628,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32950193" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32950193" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32950193" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32950193" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -650,7 +663,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="init project files" />
     <MESSAGE value="add base page, styles and fonts" />
     <MESSAGE value="add movies, add &quot;image&quot; in cinemas" />
     <MESSAGE value="work with databases, add schedules" />
@@ -675,24 +687,13 @@
     <MESSAGE value="add adding movies" />
     <MESSAGE value="add deleting movies" />
     <MESSAGE value="add adding cinemas" />
-    <option name="LAST_COMMIT_MESSAGE" value="add adding cinemas" />
+    <MESSAGE value="add deleting cinemas" />
+    <option name="LAST_COMMIT_MESSAGE" value="add deleting cinemas" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/pages/signin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/pages/signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pages/signin.html" />
+    <entry file="file://$PROJECT_DIR$/templates/pages/signup.html" />
     <entry file="file://$PROJECT_DIR$/static/css/normalize.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4811">
@@ -774,13 +775,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/django/contrib/auth/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="90" column="8" selection-start-line="90" selection-start-column="8" selection-end-line="90" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/django/core/handlers/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
@@ -854,34 +848,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/adminpanel/templates/admins_page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="58" lean-forward="true" selection-start-line="6" selection-start-column="58" selection-end-line="6" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/db/users_db.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adminpanel/templates/editing/addmoderator.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loginsys/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="46" column="12" selection-start-line="46" selection-start-column="12" selection-end-line="48" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -899,13 +869,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="671" column="17" selection-start-line="671" selection-start-column="17" selection-end-line="671" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/adminpanel/templates/editing/deletestuff.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -920,10 +883,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/db/movies_db.json">
+    <entry file="file://$PROJECT_DIR$/adminpanel/templates/editing/deletemovie.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="1" selection-start-column="1" selection-end-column="1" />
+          <caret selection-end-line="12" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CinemaPoisk/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1139">
+          <caret line="71" column="54" selection-start-line="71" selection-start-column="54" selection-end-line="71" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/db/cinemas_db.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18088">
+          <caret line="1064" column="1" selection-start-line="1064" selection-start-column="1" selection-end-line="1064" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adminpanel/templates/editing/deletecinema.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="67" selection-start-line="5" selection-start-column="67" selection-end-line="5" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adminpanel/templates/editing/addcinema.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="76" selection-start-line="22" selection-start-column="76" selection-end-line="22" selection-end-column="76" />
         </state>
       </provider>
     </entry>
@@ -936,76 +930,80 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/pages/cinema.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+        <state relative-caret-position="289">
+          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/adminpanel/templates/editing/addcinema.html">
+    <entry file="file://$PROJECT_DIR$/templates/db/movies_db.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="76" selection-start-line="22" selection-start-column="76" selection-end-line="22" selection-end-column="76" />
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CinemaPoisk/views.py">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/django/contrib/auth/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="71" column="54" selection-start-line="71" selection-start-column="54" selection-end-line="71" selection-end-column="54" />
+        <state relative-caret-position="354">
+          <caret line="116" column="8" selection-start-line="116" selection-start-column="8" selection-end-line="116" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginsys/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
           <folding>
-            <element signature="e#0#45#0" expanded="true" />
+            <element signature="e#0#54#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/adminpanel/templates/editing/deletemovie.html">
+    <entry file="file://$PROJECT_DIR$/adminpanel/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="12" selection-end-column="14" />
+        <state relative-caret-position="650">
+          <caret line="144" column="47" lean-forward="true" selection-start-line="144" selection-start-column="47" selection-end-line="144" selection-end-column="47" />
+          <folding>
+            <element signature="e#13133#15209#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adminpanel/templates/editing/addmoderator.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="79" selection-start-line="5" selection-start-column="79" selection-end-line="5" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adminpanel/templates/editing/deletemoderator.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="65" selection-start-line="10" selection-start-column="65" selection-end-line="10" selection-end-column="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CinemaPoisk/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="59" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
+        <state relative-caret-position="306">
+          <caret line="18" column="65" selection-start-line="18" selection-start-column="65" selection-end-line="18" selection-end-column="65" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/adminpanel/templates/editing/deletecinema.html">
+    <entry file="file://$PROJECT_DIR$/adminpanel/templates/admins_page.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="67" selection-start-line="5" selection-start-column="67" selection-end-line="5" selection-end-column="67" />
+          <caret line="5" column="75" selection-start-line="5" selection-start-column="75" selection-end-line="5" selection-end-column="75" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/db/cinemas_db.json">
+    <entry file="file://$PROJECT_DIR$/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="1080" column="1" selection-start-line="1080" selection-start-column="1" selection-end-line="1080" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adminpanel/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
-          <caret line="468" column="52" selection-start-line="468" selection-start-column="52" selection-end-line="468" selection-end-column="52" />
-          <folding>
-            <element signature="e#1#46#0" expanded="true" />
-            <element signature="e#227#783#0" />
-            <element signature="e#227#751#0" />
-            <element signature="e#950#1642#0" />
-            <element signature="e#2358#4106#0" />
-            <element signature="e#3840#5287#0" />
-            <element signature="e#5148#6911#0" />
-            <element signature="e#8116#10154#0" />
-            <element signature="e#10224#12819#0" />
-            <element signature="e#13133#15209#0" />
-            <element signature="e#15240#18117#0" />
-          </folding>
+        <state relative-caret-position="183">
+          <caret line="606" column="14" selection-start-line="606" selection-start-column="14" selection-end-line="606" selection-end-column="14" />
         </state>
       </provider>
     </entry>
