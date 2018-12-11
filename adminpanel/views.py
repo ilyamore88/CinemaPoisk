@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import auth
 from django.template.context_processors import csrf
+from datetime import datetime
 import json
 
 
@@ -626,3 +627,45 @@ def deletesession(request):
         return render(request, 'editing/deletesession.html', args)
     else:
         return render(request, 'editing/deletesession.html', args)
+
+
+def editcinema(request, cinemaid):
+    username = auth.get_user(request).username
+    file = open("templates/db/users_db.json", "r", encoding="utf8")
+    users = json.loads(file.read())
+    file.close()
+    currentDate = datetime.today().strftime("%d.%m.%Y")
+    currentUser = {}
+    for user in users:
+        if username == user["username"]:
+            currentUser = user
+            break
+    if currentUser == {}:
+        return redirect('/adminpanel/loginerror')
+    elif (currentUser["permissions"] != "superuser") and (currentUser["permissions"] != "moderator"):
+        auth.logout(request)
+        return redirect('/adminpanel/loginerror')
+    args = {}
+    args.update(csrf(request))
+    args["username"] = currentUser["username"]
+    args["permissions"] = currentUser["permissions"]
+    file = open("templates/db/cinemas_db.json", "r", encoding="utf8")
+    cinemas = json.loads(file.read())
+    file.close()
+    for cinema in cinemas:
+        if cinemaid == cinema["id"]:
+            args["cinema"] = cinema
+            if request.POST:
+                cinema["name"] = str(request.POST.get('name', ''))
+                cinema["image"] = request.POST.get('image', '')
+                cinema["tel"] = str(request.POST.get('tel', ''))
+                cinema["description"] = request.POST.get('description', []).split("\r\n")
+                cinema["subway"] = str(request.POST.get('subway', ''))
+                cinema["address"] = str(request.POST.get('address', ''))
+                file = open("templates/db/cinemas_db.json", "w", encoding="utf8")
+                file.write(json.dumps(cinemas, ensure_ascii=False))
+                file.close()
+                return redirect('/cinema/' + str(cinemaid) + "?date=" + currentDate)
+            else:
+                return render(request, 'editing/editcinema.html', args)
+    return redirect('/cinema/' + str(cinemaid) + "?date=" + currentDate)

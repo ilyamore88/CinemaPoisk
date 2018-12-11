@@ -674,3 +674,27 @@ footer {
     text-align: left;
     font-size: 14px;
 }
+
+.edit__link {
+    position: absolute;
+    top: 30px;
+    right: 15px;
+    font-family: 'fira_sansregular';
+    color: #292929;
+    text-decoration: none;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    border-bottom: 1px;
+    border-style: dotted;
+    line-height: 12px;
+}
+
+.edit__link:hover {
+    color: #202020;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    border-bottom: 2px;
+    border-style: dotted;
+}

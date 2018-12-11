@@ -21,6 +21,9 @@
                 <a href="/cinema/{{ cinema.id }}?date={{ currentDate }}&change=yes" class="favorite-change_link">В
                     избранном</a>
             {% endif %}
+            {% if currentUserPermissions == "superuser" or currentUserPermissions == "moderator" %}
+                <a href="/cinema/{{ cinema.id }}/edit" class="edit__link">Изменить</a>
+            {% endif %}
         </div>
     </div>
     <div class="description">

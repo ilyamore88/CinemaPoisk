@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <form action="/cinema/{{ cinema.id }}/edit" method="post" class="adminpanel">
+        {% csrf_token %}
+        <label for="name" class="admin__text_label">Название кинотеатра:</label>
+        <input type="text" name="name" id="name" class="admin__input" value="{{ cinema.name }}">
+        <label for="image" class="admin__text_label">Название фотографии:</label>
+        <input type="text" name="image" id="image" class="admin__input" value="{{ cinema.image }}">
+        <label for="description" class="admin__text_label">Описание:</label>
+        <textarea name="description" id="description"
+                  class="admin__input description_input">
+            {% for paragraph in cinema.description %}
+                {{ paragraph }}
+            {% endfor %}
+        </textarea>
+        <label for="address" class="admin__text_label">Адрес:</label>
+        <input type="text" name="address" id="address" class="admin__input" value="{{ cinema.address }}">
+        <label for="subway" class="admin__text_label">Станция метро:</label>
+        <input type="text" name="subway" id="subway" class="admin__input" value="{{ cinema.subway }}">
+        <label for="tel" class="admin__text_label">Телефон:</label>
+        <input type="text" name="tel" id="tel" class="admin__input" value="{{ cinema.tel }}">
+        {% if input_error %}
+            <label class="error">{{ input_error }}</label>
+        {% endif %}
+        <input class="admin__button" type="submit" value="Сохранить">
+    </form>
+{% endblock %}
