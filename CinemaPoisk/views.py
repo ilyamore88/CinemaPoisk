@@ -127,10 +127,15 @@ def movieRender(request, movieid):
         currentUser["permissions"] = "not authorized"
     for movie in movies:
         if movie["id"] == movieid:
-            im = Image.open("static/" + movie[
-                "image"])  # Это библиотека для работы с изображениями. Я получаю размер, чтобы потом корректно отображать на странице
-            (width, height) = im.size
-            right_size = 900 - 15 - width
+            if movie["image"]:
+                im = Image.open("static/" + movie[
+                    "image"])  # Это библиотека для работы с изображениями. Я получаю размер, чтобы потом корректно отображать на странице
+                (width, height) = im.size
+                right_size = 900 - 15 - width
+            else:
+                width = 300
+                height = 400
+                right_size = 900 - 15 - width
             return render(request, 'pages/movie.html', {"movie": movie,
                                                         "image_width": width,
                                                         "image_height": height,

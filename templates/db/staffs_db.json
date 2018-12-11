@@ -5,7 +5,9 @@
     "middle_name": "",
     "first_name": "Брайан",
     "image": "images/staffs/1.jpg",
-    "actor_films_id": [],
+    "actor_films_id": [
+      4
+    ],
     "director_films_id": [
       1
     ]
@@ -17,7 +19,8 @@
     "first_name": "Рами",
     "image": "images/staffs/2.jpg",
     "actor_films_id": [
-      1
+      1,
+      4
     ],
     "director_films_id": []
   },
@@ -28,7 +31,8 @@
     "first_name": "Бен",
     "image": "images/staffs/3.jpg",
     "actor_films_id": [
-      1
+      1,
+      4
     ],
     "director_films_id": []
   },
@@ -39,7 +43,8 @@
     "first_name": "Гвилим",
     "image": "images/staffs/4.jpg",
     "actor_films_id": [
-      1
+      1,
+      4
     ],
     "director_films_id": []
   },
@@ -162,6 +167,8 @@
     "actor_films_id": [
       3
     ],
-    "director_films_id": []
+    "director_films_id": [
+      4
+    ]
   }
 ]

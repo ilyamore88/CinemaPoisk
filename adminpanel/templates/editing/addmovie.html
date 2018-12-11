@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <form action="/adminpanel/addmovie" method="post" class="adminpanel">
+        {% csrf_token %}
+        <label for="id" class="admin__text_label">ID фильма:</label>
+        <input type="text" name="id" id="id" class="admin__input">
+        <label for="name" class="admin__text_label">Название фильма:</label>
+        <input type="text" name="name" id="name" class="admin__input">
+        <label for="image" class="admin__text_label">Название постера:</label>
+        <input type="text" name="image" id="image" class="admin__input">
+        <label for="description" class="admin__text_label">Описание:</label>
+        <textarea name="description" id="description" class="admin__input description_input"></textarea>
+        <label for="duration" class="admin__text_label">Продолжительность:</label>
+        <input type="text" name="duration" id="duration" class="admin__input">
+        <label for="age_rating" class="admin__text_label">Возрастной рейтинг:</label>
+        <input type="text" name="age_rating" id="age_rating" class="admin__input">
+        <label for="director_id" class="admin__text_label">Режиссёр (id):</label>
+        <input type="text" name="director_id" id="director_id" class="admin__input">
+        <label for="actors_id" class="admin__text_label">Актёры (id через запятую):</label>
+        <input type="text" name="actors_id" id="actors_id" class="admin__input">
+        {% if input_error %}
+            <label class="error">{{ input_error }}</label>
+        {% endif %}
+        <input class="admin__button" type="submit" value="Добавить фильм">
+    </form>
+{% endblock %}

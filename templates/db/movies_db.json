@@ -43,5 +43,20 @@
       14,
       15
     ]
+  },
+  {
+    "id": 4,
+    "name": "Русский фильм",
+    "image": "",
+    "age_rating": "21+",
+    "duration": "100 мин.",
+    "description": "fjbdfkgbdkfgdfg;dmfg;kdfkgdkfgfmdlfk",
+    "actors_id": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "director_id": 15
   }
 ]

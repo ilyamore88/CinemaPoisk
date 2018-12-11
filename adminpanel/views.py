@@ -257,3 +257,67 @@ def deletestuff(request):
             return render(request, 'editing/deletestuff.html', args)
     else:
         return render(request, 'editing/deletestuff.html', args)
+
+
+def addmovie(request):
+    username = auth.get_user(request).username
+    file = open("templates/db/users_db.json", "r", encoding="utf8")
+    users = json.loads(file.read())
+    file.close()
+    currentUser = {}
+    for user in users:
+        if username == user["username"]:
+            currentUser = user
+            break
+    if currentUser == {}:
+        return redirect('/adminpanel/loginerror')
+    elif (currentUser["permissions"] != "superuser") and (currentUser["permissions"] != "moderator"):
+        auth.logout(request)
+        return redirect('/adminpanel/loginerror')
+    args = {}
+    args.update(csrf(request))
+    args["username"] = currentUser["username"]
+    args["permissions"] = currentUser["permissions"]
+    if request.POST:
+        id = int(request.POST.get('id', ))
+        name = str(request.POST.get('name', ''))
+        image_name = ("images/movies/" + request.POST.get('image', '')) if request.POST.get('image', '') != '' else ""
+        duration = str(request.POST.get('duration', ''))
+        description = str(request.POST.get('description', ''))
+        age_rating = str(request.POST.get('age_rating', ''))
+        director_id = int(request.POST.get('director_id', ''))
+        actors_id = list(map(int, request.POST.get('actors_id', '').split(','))) if request.POST.get(
+            'actors_id', '') != '' else []
+        file = open("templates/db/movies_db.json", "r", encoding="utf8")
+        movies = json.loads(file.read())
+        file.close()
+        isID = False
+        for movie in movies:
+            if id == movie["id"]:
+                isID = True
+                break
+        if isID == False:
+            movies.append({"id": id, "name": name,
+                           "image": image_name, "age_rating": age_rating, "duration": duration,
+                           "description": description, "actors_id": actors_id,
+                           "director_id": director_id})
+            file = open("templates/db/movies_db.json", "w", encoding="utf8")
+            file.write(json.dumps(movies, ensure_ascii=False))
+            file.close()
+            file = open("templates/db/staffs_db.json", "r", encoding="utf8")
+            staffs = json.loads(file.read())
+            file.close()
+            for stuff in staffs:
+                if stuff["id"] in actors_id:
+                    stuff["actor_films_id"].append(id)
+                if stuff["id"] == director_id:
+                    stuff["director_films_id"].append(id)
+            file = open("templates/db/staffs_db.json", "w", encoding="utf8")
+            file.write(json.dumps(staffs, ensure_ascii=False))
+            file.close()
+            return redirect('/adminpanel')
+        else:
+            args["input_error"] = "Фильм с таким ID уже существует!"
+            return render(request, 'editing/addmovie.html', args)
+    else:
+        return render(request, 'editing/addmovie.html', args)

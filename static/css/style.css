@@ -661,3 +661,13 @@ footer {
     font-family: fira_sansregular;
     font-size: 14px;
 }
+
+.description_input {
+    clear: both;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 150px;
+    max-height: 150px;
+    text-align: left;
+    font-size: 14px;
+}
