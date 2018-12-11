@@ -163,17 +163,5 @@
       3
     ],
     "director_films_id": []
-  },
-  {
-    "id": 16,
-    "last_name": "Пупкин",
-    "middle_name": "",
-    "first_name": "Иван",
-    "image": "",
-    "actor_films_id": [
-      1,
-      2
-    ],
-    "director_films_id": []
   }
 ]
