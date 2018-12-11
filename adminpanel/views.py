@@ -757,3 +757,7 @@ def editstuff(request, personid):
             else:
                 return render(request, 'editing/editstuff.html', args)
     return redirect('/person/' + str(personid))
+
+
+def loginerror(request):
+    return render(request, 'loginerror.html', {})

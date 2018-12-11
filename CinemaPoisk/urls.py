@@ -18,6 +18,7 @@ urlpatterns = [
     path('auth/logout', loginviews.logout),
     path('auth/register', loginviews.register),
     path('adminpanel', adminviews.adminpanel),
+    path('adminpanel/loginerror', adminviews.loginerror),
     path('adminpanel/addmoderator', adminviews.addmoderator),
     path('adminpanel/deletemoderator', adminviews.deletemoderator),
     path('adminpanel/deleteuser', adminviews.deleteuser),

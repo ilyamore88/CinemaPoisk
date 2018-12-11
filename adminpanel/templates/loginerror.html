@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="adminpanel">
+        <div class="admin__text_label">Ошибка доступа! Пожалуйста, войдите под учётной записью администратора.</div>
+        <a href="/auth/login" class="admin__button">Войти</a>
+    </div>
+{% endblock %}
