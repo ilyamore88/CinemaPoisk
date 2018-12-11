@@ -4,18 +4,11 @@ from django.contrib import auth
 import json
 from datetime import datetime, timedelta
 
-file = open("templates/db/cinemas_db.json", "r", encoding="utf8")
-cinemas = json.loads(file.read())
-file.close()
-file = open("templates/db/movies_db.json", "r", encoding="utf8")
-movies = json.loads(file.read())
-file.close()
-file = open("templates/db/staffs_db.json", "r", encoding="utf8")
-staffs = json.loads(file.read())
-file.close()
-
 
 def indexRender(request):
+    file = open("templates/db/cinemas_db.json", "r", encoding="utf8")
+    cinemas = json.loads(file.read())
+    file.close()
     username = auth.get_user(request).username
     file = open("templates/db/users_db.json", "r", encoding="utf8")
     users = json.loads(file.read())
@@ -35,6 +28,12 @@ def indexRender(request):
 
 
 def cinemaRender(request, cinemaid):
+    file = open("templates/db/cinemas_db.json", "r", encoding="utf8")
+    cinemas = json.loads(file.read())
+    file.close()
+    file = open("templates/db/movies_db.json", "r", encoding="utf8")
+    movies = json.loads(file.read())
+    file.close()
     username = auth.get_user(request).username
     file = open("templates/db/users_db.json", "r", encoding="utf8")
     users = json.loads(file.read())
@@ -109,6 +108,12 @@ def cinemaRender(request, cinemaid):
 
 
 def movieRender(request, movieid):
+    file = open("templates/db/movies_db.json", "r", encoding="utf8")
+    movies = json.loads(file.read())
+    file.close()
+    file = open("templates/db/staffs_db.json", "r", encoding="utf8")
+    staffs = json.loads(file.read())
+    file.close()
     username = auth.get_user(request).username
     file = open("templates/db/users_db.json", "r", encoding="utf8")
     users = json.loads(file.read())
@@ -138,6 +143,12 @@ def movieRender(request, movieid):
 
 
 def personRender(request, personid):
+    file = open("templates/db/movies_db.json", "r", encoding="utf8")
+    movies = json.loads(file.read())
+    file.close()
+    file = open("templates/db/staffs_db.json", "r", encoding="utf8")
+    staffs = json.loads(file.read())
+    file.close()
     username = auth.get_user(request).username
     file = open("templates/db/users_db.json", "r", encoding="utf8")
     users = json.loads(file.read())
@@ -172,6 +183,9 @@ def personRender(request, personid):
 
 
 def favoritesRender(request):
+    file = open("templates/db/cinemas_db.json", "r", encoding="utf8")
+    cinemas = json.loads(file.read())
+    file.close()
     username = auth.get_user(request).username
     file = open("templates/db/users_db.json", "r", encoding="utf8")
     users = json.loads(file.read())

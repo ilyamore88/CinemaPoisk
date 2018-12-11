@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <form action="/adminpanel/addstuff" method="post" class="adminpanel">
+        {% csrf_token %}
+        <label for="id" class="admin__text_label">ID актёра/режиссёра:</label>
+        <input type="text" name="id" id="id" class="admin__input">
+        <label for="last_name" class="admin__text_label">Фамилия:</label>
+        <input type="text" name="last_name" id="last_name" class="admin__input">
+        <label for="first_name" class="admin__text_label">Имя:</label>
+        <input type="text" name="first_name" id="first_name" class="admin__input">
+        <label for="middle_name" class="admin__text_label">Отчество:</label>
+        <input type="text" name="middle_name" id="middle_name" class="admin__input">
+        <label for="image" class="admin__text_label">Название фотографии:</label>
+        <input type="text" name="image" id="image" class="admin__input">
+        <label for="actor_films_id" class="admin__text_label">Фильмы, в которых он снялся (id через запятую):</label>
+        <input type="text" name="actor_films_id" id="actor_films_id" class="admin__input">
+        <label for="director_films_id" class="admin__text_label">Фильмы, которые он срежессировал (id через
+            запятую):</label>
+        <input type="text" name="director_films_id" id="director_films_id" class="admin__input">
+        {% if input_error %}
+            <label class="error">{{ input_error }}</label>
+        {% endif %}
+        <input class="admin__button" type="submit" value="Добавить актёра/режиссёра">
+    </form>
+{% endblock %}

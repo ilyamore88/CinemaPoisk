@@ -5,8 +5,8 @@
         {% csrf_token %}
         <label for="username" class="admin__text_label">Удалить пользователя (username):</label>
         <input type="text" name="username" id="username" class="admin__input">
-        {% if login_error %}
-            <label class="error">{{ login_error }}</label>
+        {% if input_error %}
+            <label class="error">{{ input_error }}</label>
         {% endif %}
         <input class="admin__button" type="submit" value="Удалить пользователя">
     </form>

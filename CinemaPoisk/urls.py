@@ -17,4 +17,5 @@ urlpatterns = [
     path('adminpanel', adminviews.adminpanel),
     path('adminpanel/addmoderator', adminviews.addmoderator),
     path('adminpanel/deleteuser', adminviews.deleteuser),
+    path('adminpanel/addstuff', adminviews.addstuff),
 ]
