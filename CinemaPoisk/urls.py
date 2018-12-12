@@ -31,3 +31,5 @@ urlpatterns = [
     path('adminpanel/addsession', adminviews.addsession),
     path('adminpanel/deletesession', adminviews.deletesession),
 ]
+
+handler404 = views.page404

@@ -82,7 +82,7 @@ def addmoderator(request):
     args = {}
     args.update(csrf(request))
     args["username"] = currentUser["username"]
-    args["permissions"] = currentUser["permissions"]
+    args["currentUserPermissions"] = currentUser["permissions"]
     if request.POST:
         username = request.POST.get('username', '')
         userModerator = {}
@@ -123,7 +123,7 @@ def deletemoderator(request):
     args = {}
     args.update(csrf(request))
     args["username"] = currentUser["username"]
-    args["permissions"] = currentUser["permissions"]
+    args["currentUserPermissions"] = currentUser["permissions"]
     if request.POST:
         username = request.POST.get('username', '')
         userModerator = {}
@@ -164,7 +164,7 @@ def deleteuser(request):
     args = {}
     args.update(csrf(request))
     args["username"] = currentUser["username"]
-    args["permissions"] = currentUser["permissions"]
+    args["currentUserPermissions"] = currentUser["permissions"]
     if request.POST:
         username = request.POST.get('username', '')
         isUserFind = False
@@ -203,7 +203,7 @@ def addstuff(request):
     args = {}
     args.update(csrf(request))
     args["username"] = currentUser["username"]
-    args["permissions"] = currentUser["permissions"]
+    args["currentUserPermissions"] = currentUser["permissions"]
     if request.POST:
         id = int(request.POST.get('id', ))
         last_name = str(request.POST.get('last_name', ''))
@@ -266,7 +266,7 @@ def deletestuff(request):
     args = {}
     args.update(csrf(request))
     args["username"] = currentUser["username"]
-    args["permissions"] = currentUser["permissions"]
+    args["currentUserPermissions"] = currentUser["permissions"]
     if request.POST:
         id = int(request.POST.get('id', ''))
         file = open("templates/db/staffs_db.json", "r", encoding="utf8")
@@ -319,7 +319,7 @@ def addmovie(request):
     args = {}
     args.update(csrf(request))
     args["username"] = currentUser["username"]
-    args["permissions"] = currentUser["permissions"]
+    args["currentUserPermissions"] = currentUser["permissions"]
     if request.POST:
         id = int(request.POST.get('id', ))
         name = str(request.POST.get('name', ''))
@@ -383,7 +383,7 @@ def deletemovie(request):
     args = {}
     args.update(csrf(request))
     args["username"] = currentUser["username"]
-    args["permissions"] = currentUser["permissions"]
+    args["currentUserPermissions"] = currentUser["permissions"]
     if request.POST:
         id = int(request.POST.get('id', ''))
         file = open("templates/db/movies_db.json", "r", encoding="utf8")
@@ -436,7 +436,7 @@ def addcinema(request):
     args = {}
     args.update(csrf(request))
     args["username"] = currentUser["username"]
-    args["permissions"] = currentUser["permissions"]
+    args["currentUserPermissions"] = currentUser["permissions"]
     if request.POST:
         id = int(request.POST.get('id', ))
         name = str(request.POST.get('name', ''))
@@ -487,7 +487,7 @@ def deletecinema(request):
     args = {}
     args.update(csrf(request))
     args["username"] = currentUser["username"]
-    args["permissions"] = currentUser["permissions"]
+    args["currentUserPermissions"] = currentUser["permissions"]
     if request.POST:
         id = int(request.POST.get('id', ''))
         file = open("templates/db/cinemas_db.json", "r", encoding="utf8")
@@ -529,7 +529,7 @@ def addsession(request):
     args = {}
     args.update(csrf(request))
     args["username"] = currentUser["username"]
-    args["permissions"] = currentUser["permissions"]
+    args["currentUserPermissions"] = currentUser["permissions"]
     if request.POST:
         id_cinema = int(request.POST.get('id_cinema', ))
         id_movie = int(request.POST.get('id_movie', ))
@@ -595,7 +595,7 @@ def deletesession(request):
     args = {}
     args.update(csrf(request))
     args["username"] = currentUser["username"]
-    args["permissions"] = currentUser["permissions"]
+    args["currentUserPermissions"] = currentUser["permissions"]
     if request.POST:
         id_cinema = int(request.POST.get('id_cinema', ))
         date = str(request.POST.get('date', '01.01.1970'))
@@ -648,7 +648,7 @@ def editcinema(request, cinemaid):
     args = {}
     args.update(csrf(request))
     args["username"] = currentUser["username"]
-    args["permissions"] = currentUser["permissions"]
+    args["currentUserPermissions"] = currentUser["permissions"]
     file = open("templates/db/cinemas_db.json", "r", encoding="utf8")
     cinemas = json.loads(file.read())
     file.close()
@@ -689,7 +689,7 @@ def editmovie(request, movieid):
     args = {}
     args.update(csrf(request))
     args["username"] = currentUser["username"]
-    args["permissions"] = currentUser["permissions"]
+    args["currentUserPermissions"] = currentUser["permissions"]
     file = open("templates/db/movies_db.json", "r", encoding="utf8")
     movies = json.loads(file.read())
     file.close()
@@ -732,7 +732,7 @@ def editstuff(request, personid):
     args = {}
     args.update(csrf(request))
     args["username"] = currentUser["username"]
-    args["permissions"] = currentUser["permissions"]
+    args["currentUserPermissions"] = currentUser["permissions"]
     file = open("templates/db/staffs_db.json", "r", encoding="utf8")
     staffs = json.loads(file.read())
     file.close()

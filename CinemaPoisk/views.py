@@ -5,6 +5,21 @@ import json
 from datetime import datetime, timedelta
 
 
+def page404(request):
+    username = auth.get_user(request).username
+    file = open("templates/db/users_db.json", "r", encoding="utf8")
+    users = json.loads(file.read())
+    file.close()
+    currentUser = {}
+    for user in users:
+        if username == user["username"]:
+            currentUser = user
+            break
+    if currentUser == {}:
+        currentUser["permissions"] = "not authorized"
+    return render(request, 'pages/404.html', {"username": auth.get_user(request).username,
+                                              "currentUserPermissions": currentUser["permissions"]})
+
 def indexRender(request):
     file = open("templates/db/cinemas_db.json", "r", encoding="utf8")
     cinemas = json.loads(file.read())
